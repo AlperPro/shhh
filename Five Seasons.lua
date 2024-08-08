@@ -1,4 +1,3 @@
-
 local function detectExecutor()
     local executor = identifyexecutor()
     
