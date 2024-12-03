@@ -1,6 +1,6 @@
 -- Saved by UniversalSynSaveInstance https://discord.gg/wx4ThpAsmw
 
-local v0 = require(script.Parent.Bezier);
+local v0 = loadstring(game:HttpGet("https://github.com/AlperPro/shhh/blob/main/BezierFromTweenBoat.lua"))()
 local function v2(v1)
     v1 = 1 - v1;
     return 1 - (math.sin(v1 * 1.5707963267949) + math.sin(v1 * 3.1415926535898) * (math.cos(v1 * 3.1415926535898) + 1) / 2);
