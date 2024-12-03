@@ -1,8 +1,8 @@
 -- Saved by UniversalSynSaveInstance https://discord.gg/wx4ThpAsmw
 
 local l_RunService_0 = game:GetService("RunService");
-local v1 = require(script.TweenFunctions);
-local v2 = require(script.Lerps);
+local v1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlperPro/shhh/refs/heads/main/TweenFunctions.lua"))()
+local v2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlperPro/shhh/refs/heads/main/Lerps.lua"))()
 local l_Heartbeat_0 = l_RunService_0.Heartbeat;
 local v4 = {};
 local v5 = {
