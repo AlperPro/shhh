@@ -3,7 +3,7 @@
 return function(v0, v1, _, v3, v4) --[[ Line: 2 ]] --[[ Name: Raycast ]]
     local v5 = RaycastParams.new();
     v5.FilterDescendantsInstances = v3 or {
-        workspace.Map.Collision
+        workspace.Map
     };
     v5.FilterType = Enum.RaycastFilterType.Include;
     local v6 = nil;
