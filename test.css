@@ -1,0 +1,380 @@
+.spin {
+  z-index: 0;
+  position: absolute;
+  width: 111px;
+  height: 111px;
+  background: black;
+  border-radius: 50%;
+}
+
+.effect0 {
+  display: none;
+}
+
+.effect2 {
+  background-color: transparent !important;
+}
+
+.effect2:before,
+.effect2:after {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 4.5px;
+  top: -1px;
+  background: radial-gradient(circle, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: gradientanimate 20s linear infinite;
+  transform: rotateZ(360deg);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.effect2small:before,
+.effect2small:after {
+  left: 181px;
+  top: 43px;
+  width: 83px;
+  height: 83px;
+}
+
+.effect2.effecthome {
+  left: -10px !important;
+  bottom: -2.5px !important;
+}
+
+@keyframes gradientanimate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+}
+.effect2:after {
+  filter: blur(10px);
+}
+
+/* Spinny border */
+.effect1 {
+  width: 111px;
+  height: 111px;
+  top: 231px;
+  left: 7px;
+  border-radius: 50%;
+  border-top: 2px dashed #ffcc00;
+  border-right: 2px dashed #ffcc00;
+  border-left: 2px dashed #000000;
+  border-bottom: 2px dashed #000000;
+  padding: 10px;
+  animation: spin 10s infinite linear;
+}
+
+.effect1.effecthome {
+  left: -3.5px !important;
+  top: -3.5px !important;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+/* Stripes */
+.effect3 {
+  overflow: hidden;
+  position: absolute;
+  left: 6px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px deeppink, 0 0 5px rgb(0, 0, 0), inset 0 0 5px rgb(0, 0, 0);
+  bottom: 16px;
+}
+
+.effect3::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: repeating-linear-gradient(white 0%, white 7.5px, hotpink 7.5px, hotpink 15px, white 15px, white 22.5px, hotpink 22.5px, hotpink 30px);
+  transform: translateX(-20%) translateY(-20%) rotate(-45deg);
+  animation: animate 20s linear infinite;
+  transform: rotateZ(360deg);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.effect3.effecthome {
+  left: -3px !important;
+  bottom: -3px !important;
+}
+
+@keyframes animate {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 0 450px;
+  }
+}
+/* Neon */
+.effect5 {
+  border-radius: 50%;
+  padding: 10px;
+  left: 7px;
+  bottom: 15px;
+  animation: neon 1s ease-in-out infinite alternate;
+  transform: rotateZ(360deg);
+  backface-visibility: hidden;
+  perspective: 1000;
+  border: 3px solid #ff6ec4;
+  box-shadow: 0 0 10px #ff6ec4, 0 0 20px #ff6ec4, 0 0 30px #ff6ec4, 0 0 40px #ff6ec4;
+}
+
+.effect5.effecthome {
+  width: 104px !important;
+  height: 104px !important;
+}
+
+@keyframes neon {
+  from {
+    box-shadow: 0 0 5px #ff6ec4, 0 0 10px #ff6ec4, 0 0 15px #ff6ec4, 0 0 20px #ff6ec4;
+  }
+  to {
+    box-shadow: 0 0 5px #ff6ec4, 0 0 10px #ff6ec4, 0 0 20px #ff6ec4, 0 0 30px #ff6ec4, 0 0 35px #ff6ec4;
+  }
+}
+/* Pulse */
+.effect6 {
+  border-radius: 50%;
+  padding: 10px;
+  left: 7px;
+  bottom: 15px;
+  animation: pulse 2s infinite;
+  border: 2px solid #f00;
+  transform: rotateZ(360deg);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.effect6.effect-home {
+  left: -3px !important;
+  bottom: -4px !important;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+/* Alien */
+.effect7 {
+  border-radius: 50%;
+  padding: 10px;
+  background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 70%, rgb(68, 68, 68) 100%);
+  box-shadow: 0 0 5px #fff, 0 0 25px #0f0, 0 0 50px #0f0, 0 0 200px #0f0;
+  animation: space 10s infinite;
+  transform: rotateZ(360deg);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+@keyframes space {
+  0%, 100% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #0f0, 0 0 15px #0f0, 0 0 20px #0f0;
+  }
+  50% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0, 0 0 35px #0f0;
+  }
+}
+/* Fire */
+/* Bubble */
+.effect-static {
+  z-index: 0;
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  left: 0px;
+  bottom: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.effect-bubble {
+  background-image: url("chrome-extension://namkakclifhmccmkbeddddpjegmdimed/images/Bubble.png");
+}
+
+.effect-rock {
+  background-image: url("chrome-extension://namkakclifhmccmkbeddddpjegmdimed/images/Rock.png");
+}
+
+/* Blob */
+:root {
+  --background: #005;
+  --primary: #88d5bf;
+  --secondary: #5d6bf8;
+  --third: #e27fcb;
+  --clip-distance: 0.05;
+  --clip-size: calc(133px * (1 + var(--clip-distance) * 2));
+  --path-width: 2px;
+  --anime-time: 8s;
+}
+
+.effect4 {
+  /* top: 13px; */
+  left: 4px;
+  width: 115px;
+  height: 115px;
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  transition: all 1s ease-in-out;
+  transform: rotateZ(360deg);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.effect4.effecthome {
+  left: -5px !important;
+  bottom: -5px !important;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+  }
+}
+/* Clippath */
+/* .effect5 {
+	background-color: #DDFFF7;
+	position: absolute;
+	box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.75);
+	left: 6px;
+	bottom: 16px;
+  }
+
+  .effect5:after, .effect5:before {
+	mix-blend-mode: multiply;
+	filter: none;
+	z-index: -1;
+	content: '';
+	top: 25%;
+	left: 25%;
+	width: calc(60% + (45px * 2));
+	height: calc(60% + (45px * 2));
+	position: absolute;
+	display: block;
+	animation: border 10s ease-in-out infinite;
+	transform: translateX(-50px) translateY(-50px);
+  } */
+/* 
+  @keyframes border {
+	0%, 100% {
+	  -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+	  clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+	}
+
+	50% {
+	  -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+			  clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+	}
+  }
+
+  .effect5:after {
+	animation-delay: -5s;
+	background-color: #93e1d8;
+	clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+  }
+
+  .effect5:before {
+	background-color: #AA4465;
+	clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+  } */
+/* General attributes */
+.effecthome {
+  left: 0 !important;
+  bottom: 0 !important;
+}
+
+.spin.effect-friend {
+  left: -2px;
+  top: -2px;
+  width: 94px;
+  height: 94px;
+}
+
+.effect-friend.effect2:before {
+  left: -2px !important;
+  top: -2px !important;
+}
+
+.effect-friend.effect4 {
+  width: 97px !important;
+  height: 97px !important;
+  left: -3px !important;
+  top: -3px !important;
+}
+
+/* Effect previews */
+.effect1-preview {
+  width: 84px !important;
+  height: 84px !important;
+  position: relative;
+  left: -2px;
+  top: -82px;
+}
+
+.effect2-preview::before,
+.effect2-preview::after {
+  left: -1.5px !important;
+  display: block !important;
+  position: relative !important;
+  top: -82px !important;
+  z-index: 0 !important;
+}
+
+.effect2-preview::after {
+  display: none !important;
+}
+
+.effect3-preview {
+  position: relative;
+  left: -1px;
+  width: 83px !important;
+  height: 83px !important;
+  top: -81px;
+}
+
+.effect4-preview {
+  position: relative;
+  left: -3px;
+  width: 85px !important;
+  height: 85px !important;
+  top: -82px;
+}
+
+.effect5-preview {
+  position: relative !important;
+  bottom: 80px !important;
+  left: 0 !important;
+}
+
+.effect5-preview:after,
+.effect5-preview:before {
+  mix-blend-mode: unset !important;
+  z-index: 0 !important;
+  top: 20px !important;
+}
