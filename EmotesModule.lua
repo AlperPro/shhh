@@ -18800,7 +18800,7 @@ v0.Play = function(_, v96, v97, v98, v99, v100) --[[ Line: 458 ]] --[[ Name: Pla
                                     l_ObjectValue_0.Value = v96;
                                     l_ObjectValue_0.Name = "#PLAYERBIND";
                                     l_ObjectValue_0:SetAttribute("Person", (tostring(l_v2855_1)));
-                                    l_ObjectValue_0.Parent = game.ServerStorage
+                                    l_ObjectValue_0.Parent = game.ReplicatedStorage
                                     table.insert(v2832, l_ObjectValue_0);
                                     if tostring(l_v2855_1) == "Weakest Dummy" then
                                         local v2980 = {
