@@ -1,7 +1,7 @@
 local v0 = {};
 local v1 = 85;
 local v2 = require(game.ReplicatedStorage.ActionCheck);
-local v3 = require(script.VFX);
+local v3 = require(game.ReplicatedStorage.Emotes.VFX);
 if workspace:FindFirstChild("Duel Choice") then
     v1 = 37.5;
 end;
@@ -60,7 +60,7 @@ end;
 local l_CollectionService_0 = game:GetService("CollectionService");
 local function v45(v29) --[[ Line: 67 ]]
     -- upvalues: l_CollectionService_0 (copy)
-    local l_FirstChild_0 = script.NewAssets:FindFirstChild(v29.name);
+    local l_FirstChild_0 = game.ReplicatedStorage.Emotes.NewAssets:FindFirstChild(v29.name);
     local l_char_0 = v29.char;
     local l_cleanup_0 = v29.cleanup;
     if l_FirstChild_0 then
@@ -403,7 +403,7 @@ local function v91(v88, v89, v90) --[[ Line: 427 ]]
     end;
 end;
 local function v99(v92, v93, v94) --[[ Line: 444 ]]
-    local v95 = script[v92 .. "Handle"]:Clone();
+    local v95 = game.ReplicatedStorage.Emotes[v92 .. "Handle"]:Clone();
     v95:SetAttribute("EmoteProperty", true);
     table.insert(v93, v95);
     local l_m6d_0 = v95.m6d;
@@ -513,7 +513,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     }):Play();
                     local v121 = v101["Right Arm"];
                     for _ = 1, 2 do
-                        local v123 = script.cursedEnergy2:Clone();
+                        local v123 = game.ReplicatedStorage.Emotes.cursedEnergy2:Clone();
                         v123.Parent = v101;
                         v123:SetAttribute("EmoteProperty", true);
                         table.insert(v116, v123);
@@ -553,7 +553,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     }):Play();
                     local v130 = v101["Right Arm"];
                     for _ = 1, 2 do
-                        local v132 = script.cursedEnergy:Clone();
+                        local v132 = game.ReplicatedStorage.Emotes.cursedEnergy:Clone();
                         v132.Parent = v101;
                         v132:SetAttribute("EmoteProperty", true);
                         table.insert(v125, v132);
@@ -582,7 +582,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Keyframes = {
                 first = function(v134, _, _, _, _) --[[ Line: 643 ]]
                     -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy), v17 (ref)
-                    local l_AmplifyVfx_0 = script.AmplifyVfx;
+                    local l_AmplifyVfx_0 = game.ReplicatedStorage.Emotes.AmplifyVfx;
                     local v140 = {};
                     local v141 = {};
                     local function v148(v142, v143) --[[ Line: 650 ]]
@@ -632,7 +632,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 end, 
                 sec = function(v153, _, _, _, _) --[[ Line: 697 ]]
                     -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy), v17 (ref)
-                    local l_AmplifyVfx_1 = script.AmplifyVfx;
+                    local l_AmplifyVfx_1 = game.ReplicatedStorage.Emotes.AmplifyVfx;
                     local function v165(v159, v160) --[[ Line: 700 ]]
                         -- upvalues: l_AmplifyVfx_1 (copy), v153 (copy), l_CollectionService_1 (ref), v104 (ref), l_PlayerFromCharacter_0 (ref), v101 (ref)
                         local v161 = l_AmplifyVfx_1[v159]:Clone();
@@ -698,7 +698,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             KillEmote = true, 
             Startup = function(v166, _, v168) --[[ Line: 770 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v169 = script.Present:Clone();
+                local v169 = game.ReplicatedStorage.Emotes.Present:Clone();
                 v169:SetAttribute("EmoteProperty", true);
                 table.insert(v166, v169);
                 v168.Handle = v169;
@@ -738,7 +738,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     table.insert(v171, v174);
                     l_CollectionService_1:AddTag(v174, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 end;
-                local l_Part_0 = script.Ruthless.Part;
+                local l_Part_0 = game.ReplicatedStorage.Emotes.Ruthless.Part;
                 local v177 = v101["Right Arm"];
                 for _ = 1, 2 do
                     local v179 = nil;
@@ -830,7 +830,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 -- upvalues: v99 (ref), v101 (copy)
                 local _ = v99("Left", v190, v101);
                 local _ = v99("Right", v190, v101);
-                local v195 = script.bookHeart:Clone();
+                local v195 = game.ReplicatedStorage.Emotes.bookHeart:Clone();
                 v195:SetAttribute("EmoteProperty", true);
                 table.insert(v190, v195);
                 local v196 = v195["Book BinderM"];
@@ -853,7 +853,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v197, _, _) --[[ Line: 1015 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy)
-                local l_Wipe_0 = script.Wipe;
+                local l_Wipe_0 = game.ReplicatedStorage.Emotes.Wipe;
                 local v201 = l_Wipe_0.Glasses:Clone();
                 v201.Parent = v101.Head;
                 local l_Motor6D_3 = v201:FindFirstChildOfClass("Motor6D");
@@ -948,7 +948,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v218, _, _) --[[ Line: 1126 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v221 = script.BanHammer:Clone();
+                local v221 = game.ReplicatedStorage.Emotes.BanHammer:Clone();
                 v221:SetAttribute("EmoteProperty", true);
                 table.insert(v218, v221);
                 l_CollectionService_1:AddTag(v221, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -990,7 +990,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     -- upvalues: v101 (copy), v7 (ref)
                     local l_Sparks2_0 = v101:FindFirstChild("Sparks2");
                     if not l_Sparks2_0 then
-                        l_Sparks2_0 = script.BadWolf.Sparks2:Clone();
+                        l_Sparks2_0 = game.ReplicatedStorage.Emotes.BadWolf.Sparks2:Clone();
                         l_Sparks2_0.Parent = v101;
                         local l_Motor6D_5 = l_Sparks2_0:FindFirstChildOfClass("Motor6D");
                         l_Motor6D_5.Part0 = v101.PrimaryPart;
@@ -1017,7 +1017,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     l_CollectionService_1:AddTag(v233, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                     v233.Parent = v101;
                 end;
-                local l_BadWolf_0 = script.BadWolf;
+                local l_BadWolf_0 = game.ReplicatedStorage.Emotes.BadWolf;
                 local function v242(v236) --[[ Line: 1212 ]]
                     -- upvalues: v230 (copy), l_CollectionService_1 (ref), v104 (ref), l_PlayerFromCharacter_0 (ref), v101 (ref)
                     for _, v238 in pairs(v236.things) do
@@ -1123,7 +1123,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     table.insert(v252, v255);
                     l_CollectionService_1:AddTag(v255, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 end;
-                local l_BladesOfJade_0 = script.BladesOfJade;
+                local l_BladesOfJade_0 = game.ReplicatedStorage.Emotes.BladesOfJade;
                 for _, v259 in pairs(l_BladesOfJade_0.Attach:GetChildren()) do
                     local v260 = v259:Clone();
                     v260.Parent = v101.Head;
@@ -1177,8 +1177,8 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Startup = function(v267, _, _) --[[ Line: 1364 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
                 for _, v271 in pairs({
-                    script.Circle1, 
-                    script.Circle2
+                    game.ReplicatedStorage.Emotes.Circle1, 
+                    game.ReplicatedStorage.Emotes.Circle2
                 }) do
                     local v272 = v271:Clone();
                     v272:SetAttribute("EmoteProperty", true);
@@ -1214,8 +1214,8 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Startup = function(v275, _, _) --[[ Line: 1401 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
                 for _, v279 in pairs({
-                    script.Circle1, 
-                    script.Circle2
+                    game.ReplicatedStorage.Emotes.Circle1, 
+                    game.ReplicatedStorage.Emotes.Circle2
                 }) do
                     local v280 = v279:Clone();
                     v280:SetAttribute("EmoteProperty", true);
@@ -1249,7 +1249,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v283, _, _) --[[ Line: 1437 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v286 = script.WalkieTalkie:Clone();
+                local v286 = game.ReplicatedStorage.Emotes.WalkieTalkie:Clone();
                 v286:SetAttribute("EmoteProperty", true);
                 table.insert(v283, v286);
                 l_CollectionService_1:AddTag(v286, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1277,7 +1277,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v288, _, _) --[[ Line: 1468 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v291 = script.chalice:Clone();
+                local v291 = game.ReplicatedStorage.Emotes.chalice:Clone();
                 v291:SetAttribute("EmoteProperty", true);
                 table.insert(v288, v291);
                 l_CollectionService_1:AddTag(v291, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1306,7 +1306,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v293, _, _) --[[ Line: 1499 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v296 = script.Maniac.MeshPart:Clone();
+                local v296 = game.ReplicatedStorage.Emotes.Maniac.MeshPart:Clone();
                 v296:SetAttribute("EmoteProperty", true);
                 table.insert(v293, v296);
                 l_CollectionService_1:AddTag(v296, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1398,7 +1398,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v308, _, _) --[[ Line: 1632 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy), v99 (ref)
-                local v311 = script.PhoneBeQuiet:Clone();
+                local v311 = game.ReplicatedStorage.Emotes.PhoneBeQuiet:Clone();
                 v311:SetAttribute("EmoteProperty", true);
                 table.insert(v308, v311);
                 l_CollectionService_1:AddTag(v311, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1444,7 +1444,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v319, _, _) --[[ Line: 1687 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v322 = script.Torch:Clone();
+                local v322 = game.ReplicatedStorage.Emotes.Torch:Clone();
                 v322:SetAttribute("EmoteProperty", true);
                 table.insert(v319, v322);
                 l_CollectionService_1:AddTag(v322, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1473,7 +1473,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v324, _, _) --[[ Line: 1717 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v327 = script.pitchfork:Clone();
+                local v327 = game.ReplicatedStorage.Emotes.pitchfork:Clone();
                 v327:SetAttribute("EmoteProperty", true);
                 table.insert(v324, v327);
                 l_CollectionService_1:AddTag(v327, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1523,7 +1523,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v332, _, _) --[[ Line: 1772 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v335 = script.signkj:Clone();
+                local v335 = game.ReplicatedStorage.Emotes.signkj:Clone();
                 v335:SetAttribute("EmoteProperty", true);
                 table.insert(v332, v335);
                 l_CollectionService_1:AddTag(v335, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1552,7 +1552,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v337, _, _) --[[ Line: 1803 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v340 = script.Lamp:Clone();
+                local v340 = game.ReplicatedStorage.Emotes.Lamp:Clone();
                 v340:SetAttribute("EmoteProperty", true);
                 table.insert(v337, v340);
                 l_CollectionService_1:AddTag(v340, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1595,7 +1595,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v342, _, _, _, v346) --[[ Line: 1851 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy), v75 (ref)
-                local v347 = script.Sleigh:Clone();
+                local v347 = game.ReplicatedStorage.Emotes.Sleigh:Clone();
                 v347:SetAttribute("EmoteProperty", true);
                 table.insert(v342, v347);
                 l_CollectionService_1:AddTag(v347, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1641,7 +1641,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v350, _, _) --[[ Line: 1895 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy)
-                local v353 = script.RockBig:Clone();
+                local v353 = game.ReplicatedStorage.Emotes.RockBig:Clone();
                 v353.Parent = v101;
                 v353.Anchored = true;
                 v353:SetAttribute("EmoteProperty", true);
@@ -1679,7 +1679,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v355, _, _) --[[ Line: 1932 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v358 = script.Borgir:Clone();
+                local v358 = game.ReplicatedStorage.Emotes.Borgir:Clone();
                 v358:SetAttribute("EmoteProperty", true);
                 table.insert(v355, v358);
                 l_CollectionService_1:AddTag(v358, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1706,7 +1706,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v360, _, _) --[[ Line: 1961 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v363 = script.PlacaSoPraAnimar:Clone();
+                local v363 = game.ReplicatedStorage.Emotes.PlacaSoPraAnimar:Clone();
                 v363:SetAttribute("EmoteProperty", true);
                 table.insert(v360, v363);
                 l_CollectionService_1:AddTag(v363, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1738,7 +1738,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v368, _, _) --[[ Line: 1995 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v371 = script.Maniac.MeshPart:Clone();
+                local v371 = game.ReplicatedStorage.Emotes.Maniac.MeshPart:Clone();
                 v371:SetAttribute("EmoteProperty", true);
                 table.insert(v368, v371);
                 l_CollectionService_1:AddTag(v371, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1766,7 +1766,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v373, _, _) --[[ Line: 2025 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v376 = script.Maniac.MeshPart:Clone();
+                local v376 = game.ReplicatedStorage.Emotes.Maniac.MeshPart:Clone();
                 v376:SetAttribute("EmoteProperty", true);
                 table.insert(v373, v376);
                 l_CollectionService_1:AddTag(v376, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -1958,7 +1958,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         table.insert(v403, v406);
                         l_CollectionService_1:AddTag(v406, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                     end;
-                    local v408 = script.BackgroundCrashoutVfx:Clone();
+                    local v408 = game.ReplicatedStorage.Emotes.BackgroundCrashoutVfx:Clone();
                     v408.Parent = v101;
                     v408.Anchored = true;
                     v408:SetAttribute("EmoteProperty", true);
@@ -2467,7 +2467,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v416, _, v418) --[[ Line: 2870 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v419 = script.Sunflower:Clone();
+                local v419 = game.ReplicatedStorage.Emotes.Sunflower:Clone();
                 v419:SetAttribute("EmoteProperty", true);
                 table.insert(v416, v419);
                 v418.Handle = v419;
@@ -2533,7 +2533,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v425, _, v427) --[[ Line: 2935 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v428 = script.clock:Clone();
+                local v428 = game.ReplicatedStorage.Emotes.clock:Clone();
                 v428:SetAttribute("EmoteProperty", true);
                 table.insert(v425, v428);
                 v427.Handle = v428;
@@ -2556,7 +2556,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v430, _, v432) --[[ Line: 2959 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v433 = script.dj_Pad:Clone();
+                local v433 = game.ReplicatedStorage.Emotes.dj_Pad:Clone();
                 v433:SetAttribute("EmoteProperty", true);
                 table.insert(v430, v433);
                 v432.Handle = v433;
@@ -2604,7 +2604,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v435, _, v437) --[[ Line: 3003 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v438 = script.horn:Clone();
+                local v438 = game.ReplicatedStorage.Emotes.horn:Clone();
                 v438:SetAttribute("EmoteProperty", true);
                 table.insert(v435, v438);
                 v437.Handle = v438;
@@ -2634,7 +2634,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v440, _, v442) --[[ Line: 3032 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v443 = script["big shoe lol"]:Clone();
+                local v443 = game.ReplicatedStorage.Emotes["big shoe lol"]:Clone();
                 v443:SetAttribute("EmoteProperty", true);
                 table.insert(v440, v443);
                 v442.Handle = v443;
@@ -2669,7 +2669,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v445, _, v447) --[[ Line: 3067 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v448 = script.Plane:Clone();
+                local v448 = game.ReplicatedStorage.Emotes.Plane:Clone();
                 v448:SetAttribute("EmoteProperty", true);
                 table.insert(v445, v448);
                 v447.Handle = v448;
@@ -2694,7 +2694,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v450, _, v452) --[[ Line: 3093 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v453 = script.LeftHandlecand:Clone();
+                local v453 = game.ReplicatedStorage.Emotes.LeftHandlecand:Clone();
                 v453:SetAttribute("EmoteProperty", true);
                 table.insert(v450, v453);
                 v452.Handle = v453;
@@ -2743,7 +2743,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v456, _, v458) --[[ Line: 3137 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref), v107 (ref)
-                local v459 = script.Treadmill:Clone();
+                local v459 = game.ReplicatedStorage.Emotes.Treadmill:Clone();
                 v459:SetAttribute("EmoteProperty", true);
                 table.insert(v456, v459);
                 v458.Handle = v459;
@@ -2822,7 +2822,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v464, _, v466) --[[ Line: 3206 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v467 = script.Bear:Clone();
+                local v467 = game.ReplicatedStorage.Emotes.Bear:Clone();
                 v467:SetAttribute("EmoteProperty", true);
                 table.insert(v464, v467);
                 v466.Handle = v467;
@@ -2858,7 +2858,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v469, _, v471) --[[ Line: 3240 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v472 = script.PanTwo:Clone();
+                local v472 = game.ReplicatedStorage.Emotes.PanTwo:Clone();
                 v472:SetAttribute("EmoteProperty", true);
                 table.insert(v469, v472);
                 v471.Handle = v472;
@@ -2877,7 +2877,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     Volume = 1, 
                     Looped = true
                 }):Play();
-                local v474 = script.Pancake:Clone();
+                local v474 = game.ReplicatedStorage.Emotes.Pancake:Clone();
                 v474:SetAttribute("EmoteProperty", true);
                 table.insert(v469, v474);
                 v471.Handle = v474;
@@ -2905,7 +2905,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     "Spanish", 
                     "TextHandle"
                 }) do
-                    local v481 = script[v480]:Clone();
+                    local v481 = game.ReplicatedStorage.Emotes[v480]:Clone();
                     v481:SetAttribute("EmoteProperty", true);
                     table.insert(v476, v481);
                     v478.Handle = v481;
@@ -2940,7 +2940,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v483, _, v485) --[[ Line: 3318 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v486 = script.boombox:Clone();
+                local v486 = game.ReplicatedStorage.Emotes.boombox:Clone();
                 v486:SetAttribute("EmoteProperty", true);
                 table.insert(v483, v486);
                 v485.Handle = v486;
@@ -2971,7 +2971,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(_, _, _) --[[ Line: 3351 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v75 (ref), v107 (ref)
-                local v491 = script.BoomBox:Clone();
+                local v491 = game.ReplicatedStorage.Emotes.BoomBox:Clone();
                 v491:SetAttribute("EmoteProperty", true);
                 local l_BoomBox_0 = v491.BoomBox;
                 l_BoomBox_0:SetAttribute("EmoteProperty", true);
@@ -3062,7 +3062,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v494, _, v496) --[[ Line: 3444 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v497 = script.Stick:Clone();
+                local v497 = game.ReplicatedStorage.Emotes.Stick:Clone();
                 v497:SetAttribute("EmoteProperty", true);
                 table.insert(v494, v497);
                 v496.Handle = v497;
@@ -3074,7 +3074,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Stick_0.Part1 = v497;
                 l_Stick_0.Parent = v101["Right Arm"];
                 v497.Parent = v101;
-                local v499 = script.Bag:Clone();
+                local v499 = game.ReplicatedStorage.Emotes.Bag:Clone();
                 v499:SetAttribute("EmoteProperty", true);
                 table.insert(v494, v499);
                 v496.Handle = v499;
@@ -3104,7 +3104,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v501, _, v503) --[[ Line: 3481 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v504 = script.DemonParticles.RootAttachment:Clone();
+                local v504 = game.ReplicatedStorage.Emotes.DemonParticles.RootAttachment:Clone();
                 v504:SetAttribute("EmoteProperty", true);
                 table.insert(v501, v504);
                 table.insert(v503, v504);
@@ -3151,7 +3151,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v512, _, v514) --[[ Line: 3539 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v515 = script.Frisbee:Clone();
+                local v515 = game.ReplicatedStorage.Emotes.Frisbee:Clone();
                 v515:SetAttribute("EmoteProperty", true);
                 table.insert(v512, v515);
                 v514.Frisbee = v515;
@@ -3168,7 +3168,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 Toss = function(v517) --[[ Line: 3551 ]]
                     -- upvalues: l_CollectionService_1 (ref), v101 (copy), l_PlayerFromCharacter_0 (copy), v75 (ref)
                     v517.Frisbee.Transparency = 1;
-                    local v518 = script.Frisbee:Clone();
+                    local v518 = game.ReplicatedStorage.Emotes.Frisbee:Clone();
                     l_CollectionService_1:AddTag(v518, "emotestuff" .. v101.Name);
                     game:GetService("Debris"):AddItem(v518, 5);
                     v518.CanCollide = true;
@@ -3222,7 +3222,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v522, _, v524) --[[ Line: 3616 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v525 = script.Controller:Clone();
+                local v525 = game.ReplicatedStorage.Emotes.Controller:Clone();
                 v525:SetAttribute("EmoteProperty", true);
                 table.insert(v522, v525);
                 v524.Handle = v525;
@@ -3251,7 +3251,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v527, _, v529) --[[ Line: 3645 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v530 = script.SpareChangeCup:Clone();
+                local v530 = game.ReplicatedStorage.Emotes.SpareChangeCup:Clone();
                 v530:SetAttribute("EmoteProperty", true);
                 table.insert(v527, v530);
                 v529.Handle = v530;
@@ -3264,7 +3264,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Handle_1.Part1 = v530;
                 l_Handle_1.Parent = v101["Right Arm"];
                 v530.Parent = v101;
-                local v532 = script.Box:Clone();
+                local v532 = game.ReplicatedStorage.Emotes.Box:Clone();
                 v532:SetAttribute("EmoteProperty", true);
                 table.insert(v527, v532);
                 v529.Handle = v532;
@@ -3293,7 +3293,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v534, _, v536) --[[ Line: 3681 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v537 = script.TSB_tomato:Clone();
+                local v537 = game.ReplicatedStorage.Emotes.TSB_tomato:Clone();
                 v537:SetAttribute("EmoteProperty", true);
                 table.insert(v534, v537);
                 v536.TSB_tomato = v537;
@@ -3314,7 +3314,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 Tomato = function(v540) --[[ Line: 3698 ]]
                     -- upvalues: l_CollectionService_1 (ref), v101 (copy), l_PlayerFromCharacter_0 (copy), v75 (ref)
                     v540.TSB_tomato.Transparency = 1;
-                    local v541 = script.TSB_tomato:Clone();
+                    local v541 = game.ReplicatedStorage.Emotes.TSB_tomato:Clone();
                     l_CollectionService_1:AddTag(v541, "emotestuff" .. v101.Name);
                     game:GetService("Debris"):AddItem(v541, 5);
                     v541.CanCollide = true;
@@ -3373,7 +3373,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v549, _, v551) --[[ Line: 3761 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v552 = script.TSB_waterbottle:Clone();
+                local v552 = game.ReplicatedStorage.Emotes.TSB_waterbottle:Clone();
                 v552:SetAttribute("EmoteProperty", true);
                 table.insert(v549, v552);
                 v551.WaterBottle = v552;
@@ -3390,7 +3390,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 Flip = function(v554) --[[ Line: 3773 ]]
                     -- upvalues: l_CollectionService_1 (ref), v101 (copy), l_PlayerFromCharacter_0 (copy), v75 (ref)
                     v554.WaterBottle.Transparency = 1;
-                    local v555 = script.TSB_waterbottle:Clone();
+                    local v555 = game.ReplicatedStorage.Emotes.TSB_waterbottle:Clone();
                     l_CollectionService_1:AddTag(v555, "emotestuff" .. v101.Name);
                     game:GetService("Debris"):AddItem(v555, 5);
                     v555.CanCollide = true;
@@ -3448,7 +3448,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v563, _, v565) --[[ Line: 3833 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v566 = script.golfball:Clone();
+                local v566 = game.ReplicatedStorage.Emotes.golfball:Clone();
                 v566:SetAttribute("EmoteProperty", true);
                 table.insert(v563, v566);
                 v565.GolfBall = v566;
@@ -3460,7 +3460,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_golfball_0.Part1 = v566;
                 l_golfball_0.Parent = v101.HumanoidRootPart;
                 v566.Parent = v101;
-                local v568 = script.golfclub:Clone();
+                local v568 = game.ReplicatedStorage.Emotes.golfclub:Clone();
                 v568:SetAttribute("EmoteProperty", true);
                 table.insert(v563, v568);
                 v565.Handle = v568;
@@ -3477,7 +3477,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 GolfBall = function(v570) --[[ Line: 3852 ]]
                     -- upvalues: l_CollectionService_1 (ref), v101 (copy), l_PlayerFromCharacter_0 (copy), v75 (ref)
                     v570.GolfBall.Transparency = 1;
-                    local v571 = script.golfball:Clone();
+                    local v571 = game.ReplicatedStorage.Emotes.golfball:Clone();
                     l_CollectionService_1:AddTag(v571, "emotestuff" .. v101.Name);
                     game:GetService("Debris"):AddItem(v571, 5);
                     v571.CanCollide = true;
@@ -3560,7 +3560,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v579, _, v581) --[[ Line: 3952 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v582 = script.KickChair:Clone();
+                local v582 = game.ReplicatedStorage.Emotes.KickChair:Clone();
                 v582.Name = "Chair";
                 v582:SetAttribute("EmoteProperty", true);
                 table.insert(v579, v582);
@@ -3656,7 +3656,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v584, _, v586) --[[ Line: 4056 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v587 = script.LeftEyebrow:Clone();
+                local v587 = game.ReplicatedStorage.Emotes.LeftEyebrow:Clone();
                 v587:SetAttribute("EmoteProperty", true);
                 table.insert(v584, v587);
                 v586.Handle = v587;
@@ -3668,7 +3668,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_LeftEyebrow_0.Part1 = v587;
                 l_LeftEyebrow_0.Parent = v101.Head;
                 v587.Parent = v101.Head;
-                local v589 = script.RightEyebrow:Clone();
+                local v589 = game.ReplicatedStorage.Emotes.RightEyebrow:Clone();
                 v589:SetAttribute("EmoteProperty", true);
                 table.insert(v584, v589);
                 v586.Handle = v589;
@@ -3680,7 +3680,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_RightEyebrow_0.Part1 = v589;
                 l_RightEyebrow_0.Parent = v101.Head;
                 v589.Parent = v101.Head;
-                local v591 = script.shades:Clone();
+                local v591 = game.ReplicatedStorage.Emotes.shades:Clone();
                 v591:SetAttribute("EmoteProperty", true);
                 table.insert(v584, v591);
                 v586.Handle = v591;
@@ -3692,7 +3692,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_shades_0.Part1 = v591;
                 l_shades_0.Parent = v101.Head;
                 v591.Parent = v101;
-                local v593 = script.mic:Clone();
+                local v593 = game.ReplicatedStorage.Emotes.mic:Clone();
                 v593:SetAttribute("EmoteProperty", true);
                 table.insert(v584, v593);
                 v586.Handle = v593;
@@ -3724,7 +3724,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 if v101.Head:FindFirstChild("afro") then
                     v598 = true;
                 end;
-                local v599 = script.afro:Clone();
+                local v599 = game.ReplicatedStorage.Emotes.afro:Clone();
                 if v598 then
                     v599:SetAttribute("EmoteProperty", true);
                     table.insert(v595, v599);
@@ -3740,7 +3740,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_afro_0.Part1 = v599;
                 l_afro_0.Parent = v101.Head;
                 v599.Parent = v101.Head;
-                local v601 = script.HairDryer:Clone();
+                local v601 = game.ReplicatedStorage.Emotes.HairDryer:Clone();
                 v601:SetAttribute("EmoteProperty", true);
                 table.insert(v595, v601);
                 v597.Handle = v601;
@@ -3996,7 +3996,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 local _ = v99("Left", v641, v101);
                 local _ = v99("Right", v641, v101);
                 for v646 = 1, 3 do
-                    local v647 = script.HmmDot:Clone();
+                    local v647 = game.ReplicatedStorage.Emotes.HmmDot:Clone();
                     v647.Name = v646;
                     v647.Parent = v101;
                     local l_Motor6D_12 = Instance.new("Motor6D");
@@ -4027,7 +4027,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v649, _, v651) --[[ Line: 4446 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v652 = script.yoyorig:Clone();
+                local v652 = game.ReplicatedStorage.Emotes.yoyorig:Clone();
                 v652:SetAttribute("EmoteProperty", true);
                 table.insert(v649, v652);
                 v651.Handle = v652;
@@ -4058,7 +4058,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v655, _, v657) --[[ Line: 4472 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v658 = script.BlindGlasses:Clone();
+                local v658 = game.ReplicatedStorage.Emotes.BlindGlasses:Clone();
                 v658:SetAttribute("EmoteProperty", true);
                 table.insert(v655, v658);
                 v657.Handle = v658;
@@ -4066,7 +4066,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_BlindGlasses_0.Part0 = v101.Head;
                 l_BlindGlasses_0.Part1 = v658;
                 v658.Parent = v101;
-                local v660 = script.BlindWalkerThing:Clone();
+                local v660 = game.ReplicatedStorage.Emotes.BlindWalkerThing:Clone();
                 v660:SetAttribute("EmoteProperty", true);
                 table.insert(v655, v660);
                 v657.Handle = v660;
@@ -4117,7 +4117,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v665, _, v667) --[[ Line: 4522 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v668 = script.catjello:Clone();
+                local v668 = game.ReplicatedStorage.Emotes.catjello:Clone();
                 v668:SetAttribute("EmoteProperty", true);
                 table.insert(v665, v668);
                 v667.Handle = v668;
@@ -4144,7 +4144,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v670, _, v672) --[[ Line: 4546 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v673 = script.Knife:Clone();
+                local v673 = game.ReplicatedStorage.Emotes.Knife:Clone();
                 v673:SetAttribute("EmoteProperty", true);
                 table.insert(v670, v673);
                 v672.Handle = v673;
@@ -4172,7 +4172,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v675, _, v677) --[[ Line: 4571 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v678 = script.Cube:Clone();
+                local v678 = game.ReplicatedStorage.Emotes.Cube:Clone();
                 v678:SetAttribute("EmoteProperty", true);
                 table.insert(v675, v678);
                 v677.Handle = v678;
@@ -4201,7 +4201,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v680, _, v682) --[[ Line: 4597 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v683 = script.Brick:Clone();
+                local v683 = game.ReplicatedStorage.Emotes.Brick:Clone();
                 v683:SetAttribute("EmoteProperty", true);
                 table.insert(v680, v683);
                 v682.Handle = v683;
@@ -4230,7 +4230,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v685, _, v687) --[[ Line: 4624 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v688 = script.Lightbulb:Clone();
+                local v688 = game.ReplicatedStorage.Emotes.Lightbulb:Clone();
                 v688:SetAttribute("EmoteProperty", true);
                 table.insert(v685, v688);
                 v687.Handle = v688;
@@ -4264,7 +4264,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v690, _, v692) --[[ Line: 4655 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v693 = script.Car:Clone();
+                local v693 = game.ReplicatedStorage.Emotes.Car:Clone();
                 v693:SetAttribute("EmoteProperty", true);
                 table.insert(v690, v693);
                 v692.Handle = v693;
@@ -4306,7 +4306,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v695, _, v697) --[[ Line: 4699 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v698 = script.WatermelonSpin:Clone();
+                local v698 = game.ReplicatedStorage.Emotes.WatermelonSpin:Clone();
                 v698.Name = "WaterMelon";
                 v698:SetAttribute("EmoteProperty", true);
                 table.insert(v695, v698);
@@ -4354,7 +4354,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v700, _, _) --[[ Line: 4748 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v703 = script.Purse:Clone();
+                local v703 = game.ReplicatedStorage.Emotes.Purse:Clone();
                 v703:SetAttribute("EmoteProperty", true);
                 l_CollectionService_1:AddTag(v703, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 local l_Motor6D_13 = Instance.new("Motor6D");
@@ -4383,7 +4383,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v705, _, _) --[[ Line: 4779 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v708 = script.Rbx:Clone();
+                local v708 = game.ReplicatedStorage.Emotes.Rbx:Clone();
                 v708:SetAttribute("EmoteProperty", true);
                 l_CollectionService_1:AddTag(v708, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 v708.Parent = v101;
@@ -4599,7 +4599,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(_, _, _) --[[ Line: 5017 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v720 = script.untitled:Clone();
+                local v720 = game.ReplicatedStorage.Emotes.untitled:Clone();
                 v720:SetAttribute("EmoteProperty", true);
                 l_CollectionService_1:AddTag(v720, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 local l_m6d_4 = v720.m6d;
@@ -4643,7 +4643,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(_, _, _) --[[ Line: 5055 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy), v1 (ref)
-                local v725 = script.soccer:Clone();
+                local v725 = game.ReplicatedStorage.Emotes.soccer:Clone();
                 v725:SetAttribute("EmoteProperty", true);
                 l_CollectionService_1:AddTag(v725, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 local l_Ball_0 = v725.Handle.Ball;
@@ -4683,7 +4683,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(_, _, v730) --[[ Line: 5093 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v731 = script.whistlecard:Clone();
+                local v731 = game.ReplicatedStorage.Emotes.whistlecard:Clone();
                 v731:SetAttribute("EmoteProperty", true);
                 l_CollectionService_1:AddTag(v731, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 local l_m6d_6 = v731.m6d;
@@ -4726,7 +4726,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v739, _, _) --[[ Line: 5134 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v742 = script.Dig.Handle:Clone();
+                local v742 = game.ReplicatedStorage.Emotes.Dig.Handle:Clone();
                 v742:SetAttribute("EmoteProperty", true);
                 table.insert(v739, v742);
                 l_CollectionService_1:AddTag(v742, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -4739,7 +4739,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_m6d_7.Part1 = v742;
                 l_m6d_7.Parent = v101["Right Arm"];
                 v742.Parent = v101;
-                local v744 = script.Dig.Grave:Clone();
+                local v744 = game.ReplicatedStorage.Emotes.Dig.Grave:Clone();
                 v744:SetAttribute("EmoteProperty", true);
                 table.insert(v739, v744);
                 local l_Weld_2 = Instance.new("Weld");
@@ -4767,7 +4767,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v746, _, v748) --[[ Line: 5168 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v749 = script.slingshot:Clone();
+                local v749 = game.ReplicatedStorage.Emotes.slingshot:Clone();
                 v749:SetAttribute("EmoteProperty", true);
                 v749:SetAttribute("EmoteProperty", true);
                 table.insert(v746, v749);
@@ -4836,7 +4836,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(_, _, _) --[[ Line: 5232 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v760 = script.paddle:Clone();
+                local v760 = game.ReplicatedStorage.Emotes.paddle:Clone();
                 v760:SetAttribute("EmoteProperty", true);
                 l_CollectionService_1:AddTag(v760, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 local l_m6d_9 = v760.m6d;
@@ -4993,7 +4993,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v780, _, v782) --[[ Line: 5400 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v783 = script.dialogue:Clone();
+                local v783 = game.ReplicatedStorage.Emotes.dialogue:Clone();
                 table.insert(v780, v783);
                 v783:SetAttribute("EmoteProperty", true);
                 v782.rock = v783;
@@ -5112,7 +5112,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 local _ = v99("Left", v811, v101);
                 local l_FirstChild_1 = v99("Right", v811, v101):FindFirstChild("RThumb2", true);
                 if l_FirstChild_1 then
-                    local v816 = script.QuickStar:Clone();
+                    local v816 = game.ReplicatedStorage.Emotes.QuickStar:Clone();
                     v816.Parent = l_FirstChild_1;
                     v813.p = v816;
                 end;
@@ -5146,7 +5146,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(_, _, _) --[[ Line: 5563 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v823 = script.Coffin:Clone();
+                local v823 = game.ReplicatedStorage.Emotes.Coffin:Clone();
                 l_CollectionService_1:AddTag(v823, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 local l_Coffin_0 = v823.Coffin;
                 l_CollectionService_1:AddTag(l_Coffin_0, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -5186,7 +5186,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v825, _, _) --[[ Line: 5602 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v828 = script.hat:Clone();
+                local v828 = game.ReplicatedStorage.Emotes.hat:Clone();
                 table.insert(v825, v828);
                 v828:SetAttribute("EmoteProperty", true);
                 v828.Name = "Handle";
@@ -5215,7 +5215,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(_, _, _) --[[ Line: 5629 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v833 = script.RockMesh:Clone();
+                local v833 = game.ReplicatedStorage.Emotes.RockMesh:Clone();
                 l_CollectionService_1:AddTag(v833, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 v833.Rock.Part0 = v101.PrimaryPart;
                 v833.Rock.Part1 = v833;
@@ -5309,7 +5309,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     -- upvalues: v835 (copy), v101 (ref)
                     v835.Parent = v101;
                 end);
-                local v836 = script.chosenparticles:Clone();
+                local v836 = game.ReplicatedStorage.Emotes.chosenparticles:Clone();
                 v836:SetAttribute("EmoteProperty", true);
                 local v837 = {};
                 l_CollectionService_1:AddTag(v836, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -5499,7 +5499,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     table.insert(v853, l_Attachment_0);
                     l_Attachment_0.Parent = v101.PrimaryPart;
                     l_Attachment_0.Position = Vector3.new(0.5540000200271606, 3.069000005722046, -0.7440000176429749, 0);
-                    local v856 = script.Iq:Clone();
+                    local v856 = game.ReplicatedStorage.Emotes.Iq:Clone();
                     v856.Parent = l_Attachment_0;
                     v856:Emit(1);
                     v75({
@@ -5532,7 +5532,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     table.insert(v858, l_Attachment_1);
                     l_Attachment_1.Parent = v101.PrimaryPart;
                     l_Attachment_1.CFrame = CFrame.new(0.635131836, 1.59469604, -1.50006104, 0.873728812, 0.4864133, -0, -0.4864133, 0.873728812, 0, 0, 0, 0.99999994);
-                    local v861 = script.Question:Clone();
+                    local v861 = game.ReplicatedStorage.Emotes.Question:Clone();
                     v861.Parent = l_Attachment_1;
                     v861:Emit(1);
                     v75({
@@ -5545,7 +5545,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v862, _, v864) --[[ Line: 5960 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v865 = script.teacup:Clone();
+                local v865 = game.ReplicatedStorage.Emotes.teacup:Clone();
                 v865:SetAttribute("EmoteProperty", true);
                 table.insert(v862, v865);
                 v864.Handle = v865;
@@ -5588,7 +5588,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     table.insert(v869, l_Attachment_2);
                     l_Attachment_2.Parent = v101.PrimaryPart;
                     l_Attachment_2.Position = Vector3.new(1.75, 0.25, -3.75, 0);
-                    local v872 = script.Shoot:Clone();
+                    local v872 = game.ReplicatedStorage.Emotes.Shoot:Clone();
                     v872.Parent = l_Attachment_2;
                     v872:Emit(1);
                     v75({
@@ -5605,7 +5605,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     table.insert(v874, l_Attachment_3);
                     l_Attachment_3.Parent = v101.PrimaryPart;
                     l_Attachment_3.Position = Vector3.new(1.75, 0, -1.75, 0);
-                    local v877 = script.Heart:Clone();
+                    local v877 = game.ReplicatedStorage.Emotes.Heart:Clone();
                     v877.Parent = l_Attachment_3;
                     v877:Emit(1);
                     v75({
@@ -5916,7 +5916,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v882) --[[ Line: 6363 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v883 = script.Microphone:Clone();
+                local v883 = game.ReplicatedStorage.Emotes.Microphone:Clone();
                 local l_Microphone_0 = v883.Microphone;
                 l_Microphone_0:SetAttribute("EmoteProperty", true);
                 v883:SetAttribute("EmoteProperty", true);
@@ -6796,7 +6796,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v886, _, _) --[[ Line: 7384 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v889 = script.Throne:Clone();
+                local v889 = game.ReplicatedStorage.Emotes.Throne:Clone();
                 v889:SetAttribute("EmoteProperty", true);
                 table.insert(v886, v889);
                 local l_m6d_12 = v889.m6d;
@@ -6825,7 +6825,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v891, _, _) --[[ Line: 7414 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v894 = script["bad to the bone"]:Clone();
+                local v894 = game.ReplicatedStorage.Emotes["bad to the bone"]:Clone();
                 v894:SetAttribute("EmoteProperty", true);
                 table.insert(v891, v894);
                 local l_m6d_13 = v894.m6d;
@@ -6855,7 +6855,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v899, _, _) --[[ Line: 7443 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v902 = script.Sword:Clone();
+                local v902 = game.ReplicatedStorage.Emotes.Sword:Clone();
                 v902:SetAttribute("EmoteProperty", true);
                 table.insert(v899, v902);
                 local l_m6d_14 = v902.m6d;
@@ -6880,7 +6880,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v904, _, _) --[[ Line: 7466 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v907 = script.Sword:Clone();
+                local v907 = game.ReplicatedStorage.Emotes.Sword:Clone();
                 v907:SetAttribute("EmoteProperty", true);
                 table.insert(v904, v907);
                 local l_m6d_15 = v907.m6d;
@@ -6946,7 +6946,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Keyframes = {
                 start = function(v918, v919, _) --[[ Line: 7537 ]]
                     -- upvalues: l_PlayerFromCharacter_0 (copy), v101 (copy)
-                    local v921 = script.powerupaura.Attachment:Clone();
+                    local v921 = game.ReplicatedStorage.Emotes.powerupaura.Attachment:Clone();
                     v921:SetAttribute("EmoteProperty", true);
                     table.insert(v919, v921);
                     v918.att = v921;
@@ -7068,7 +7068,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v937, _, v939) --[[ Line: 7676 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v940 = script.Pie:Clone();
+                local v940 = game.ReplicatedStorage.Emotes.Pie:Clone();
                 v940:SetAttribute("EmoteProperty", true);
                 table.insert(v937, v940);
                 v939.Handle = v940;
@@ -7128,7 +7128,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v954, _, v956) --[[ Line: 7739 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v957 = script["Hard Boiled Roadster"]:Clone();
+                local v957 = game.ReplicatedStorage.Emotes["Hard Boiled Roadster"]:Clone();
                 v957:SetAttribute("EmoteProperty", true);
                 table.insert(v954, v957);
                 v956.Handle = v957;
@@ -7170,7 +7170,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v961, _, v963) --[[ Line: 7773 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v964 = script.Telescope:Clone();
+                local v964 = game.ReplicatedStorage.Emotes.Telescope:Clone();
                 v964:SetAttribute("EmoteProperty", true);
                 table.insert(v961, v964);
                 v963.Handle = v964;
@@ -7182,7 +7182,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Telescope_0.Part1 = v964;
                 l_Telescope_0.Parent = l_Telescope_0.Part0;
                 v964.Parent = v101;
-                local v966 = script.RockModel:Clone();
+                local v966 = game.ReplicatedStorage.Emotes.RockModel:Clone();
                 v966:SetAttribute("EmoteProperty", true);
                 table.insert(v961, v966);
                 v963.Handle = v966;
@@ -7253,7 +7253,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v973, _, v975) --[[ Line: 7848 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v976 = script.poet.Book:Clone();
+                local v976 = game.ReplicatedStorage.Emotes.poet.Book:Clone();
                 v976:SetAttribute("EmoteProperty", true);
                 table.insert(v973, v976);
                 v975.Handle = v976;
@@ -7265,7 +7265,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Handle_8.Part1 = v976.Handle;
                 l_Handle_8.Parent = l_Handle_8.Part0;
                 v976.Parent = v101;
-                local v978 = script.poet.feather:Clone();
+                local v978 = game.ReplicatedStorage.Emotes.poet.feather:Clone();
                 v978:SetAttribute("EmoteProperty", true);
                 table.insert(v973, v978);
                 v975.Handle = v978;
@@ -7277,7 +7277,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Handle_9.Part1 = v978.Handle;
                 l_Handle_9.Parent = l_Handle_9.Part0;
                 v978.Parent = v101;
-                local v980 = script.poet["studious chair"]:Clone();
+                local v980 = game.ReplicatedStorage.Emotes.poet["studious chair"]:Clone();
                 v980:SetAttribute("EmoteProperty", true);
                 table.insert(v973, v980);
                 v975.Handle = v980;
@@ -7305,7 +7305,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v982, _, v984) --[[ Line: 7886 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v985 = script.vr:Clone();
+                local v985 = game.ReplicatedStorage.Emotes.vr:Clone();
                 v985:SetAttribute("EmoteProperty", true);
                 table.insert(v982, v985);
                 v984.Handle = v985;
@@ -7333,7 +7333,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v987, _, v989) --[[ Line: 7910 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v990 = script.Lollipop:Clone();
+                local v990 = game.ReplicatedStorage.Emotes.Lollipop:Clone();
                 v990:SetAttribute("EmoteProperty", true);
                 table.insert(v987, v990);
                 v989.Handle = v990;
@@ -7366,7 +7366,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v992, _, v994) --[[ Line: 7940 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v995 = script.Laptop:Clone();
+                local v995 = game.ReplicatedStorage.Emotes.Laptop:Clone();
                 v995:SetAttribute("EmoteProperty", true);
                 table.insert(v992, v995);
                 v994.Handle = v995;
@@ -7409,7 +7409,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v997, _, v999) --[[ Line: 7981 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1000 = script.Watch:Clone();
+                local v1000 = game.ReplicatedStorage.Emotes.Watch:Clone();
                 v1000:SetAttribute("EmoteProperty", true);
                 table.insert(v997, v1000);
                 v999.Handle = v1000;
@@ -7425,7 +7425,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Keyframes = {
                 disguise = function(_, _, _) --[[ Line: 7991 ]]
                     -- upvalues: v101 (copy)
-                    local v1005 = script.CloneGlow:Clone();
+                    local v1005 = game.ReplicatedStorage.Emotes.CloneGlow:Clone();
                     v1005.Parent = v101.PrimaryPart;
                     v1005:Emit(10);
                     shared.cfolder({
@@ -7444,7 +7444,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1006, _, v1008) --[[ Line: 8013 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1009 = script["hypnotize coin"]:Clone();
+                local v1009 = game.ReplicatedStorage.Emotes["hypnotize coin"]:Clone();
                 v1009:SetAttribute("EmoteProperty", true);
                 table.insert(v1006, v1009);
                 v1008.Handle = v1009;
@@ -7498,7 +7498,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1012, _, v1014) --[[ Line: 8063 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1015 = script.TongueThree:Clone();
+                local v1015 = game.ReplicatedStorage.Emotes.TongueThree:Clone();
                 v1015:SetAttribute("EmoteProperty", true);
                 table.insert(v1012, v1015);
                 v1014.Handle = v1015;
@@ -7530,7 +7530,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1017, _, v1019) --[[ Line: 8092 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1020 = script.Tongue:Clone();
+                local v1020 = game.ReplicatedStorage.Emotes.Tongue:Clone();
                 v1020:SetAttribute("EmoteProperty", true);
                 table.insert(v1017, v1020);
                 v1019.Handle = v1020;
@@ -7602,7 +7602,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1026, _, v1028) --[[ Line: 8167 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1029 = script.Snowball:Clone();
+                local v1029 = game.ReplicatedStorage.Emotes.Snowball:Clone();
                 v1029:SetAttribute("EmoteProperty", true);
                 table.insert(v1026, v1029);
                 v1028.Handle = v1029;
@@ -7649,7 +7649,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1032, _, v1034) --[[ Line: 8216 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1035 = script.bar:Clone();
+                local v1035 = game.ReplicatedStorage.Emotes.bar:Clone();
                 v1035:SetAttribute("EmoteProperty", true);
                 table.insert(v1032, v1035);
                 v1034.Handle = v1035;
@@ -7767,7 +7767,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1053, _, v1055) --[[ Line: 8355 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1056 = script.mag:Clone();
+                local v1056 = game.ReplicatedStorage.Emotes.mag:Clone();
                 v1056:SetAttribute("EmoteProperty", true);
                 table.insert(v1053, v1056);
                 v1055.Handle = v1056;
@@ -7792,7 +7792,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1058, _, v1060) --[[ Line: 8376 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1061 = script.burger:Clone();
+                local v1061 = game.ReplicatedStorage.Emotes.burger:Clone();
                 v1061:SetAttribute("EmoteProperty", true);
                 table.insert(v1058, v1061);
                 v1060.Handle = v1061;
@@ -7836,7 +7836,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     -- upvalues: v1066 (copy), v101 (ref)
                     v1066.Parent = v101;
                 end);
-                local v1067 = script["Left Arm2"]:Clone();
+                local v1067 = game.ReplicatedStorage.Emotes["Left Arm2"]:Clone();
                 v1067:SetAttribute("EmoteProperty", true);
                 table.insert(v1063, v1067);
                 v1065.Handle = v1067;
@@ -7848,7 +7848,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Motor6D_18.Part1 = v1067;
                 l_Motor6D_18.Parent = v101.Torso;
                 v1067.Parent = v101;
-                local v1069 = script["Right Arm2"]:Clone();
+                local v1069 = game.ReplicatedStorage.Emotes["Right Arm2"]:Clone();
                 v1069:SetAttribute("EmoteProperty", true);
                 table.insert(v1063, v1069);
                 v1065.Handle = v1069;
@@ -7910,7 +7910,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1078, _, v1080) --[[ Line: 8478 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1081 = script.gun1:Clone();
+                local v1081 = game.ReplicatedStorage.Emotes.gun1:Clone();
                 v1081:SetAttribute("EmoteProperty", true);
                 table.insert(v1078, v1081);
                 v1080.Handle = v1081;
@@ -7922,7 +7922,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Motor6D_20.Part1 = v1081;
                 l_Motor6D_20.Parent = v101["Right Arm"];
                 v1081.Parent = v101;
-                local v1083 = script.gun2:Clone();
+                local v1083 = game.ReplicatedStorage.Emotes.gun2:Clone();
                 v1083:SetAttribute("EmoteProperty", true);
                 table.insert(v1078, v1083);
                 v1080.Handle = v1083;
@@ -7948,7 +7948,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1085, _, v1087) --[[ Line: 8507 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v101 (copy)
-                local v1088 = script.Flag:Clone();
+                local v1088 = game.ReplicatedStorage.Emotes.Flag:Clone();
                 v1088:SetAttribute("EmoteProperty", true);
                 table.insert(v1085, v1088);
                 v1087.Handle = v1088;
@@ -7996,7 +7996,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1102, _, v1104) --[[ Line: 8550 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1105 = script.Brush:Clone();
+                local v1105 = game.ReplicatedStorage.Emotes.Brush:Clone();
                 v1105:SetAttribute("EmoteProperty", true);
                 table.insert(v1102, v1105);
                 v1104.Handle = v1105;
@@ -8023,7 +8023,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1107, _, v1109) --[[ Line: 8573 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1110 = script.Chest:Clone();
+                local v1110 = game.ReplicatedStorage.Emotes.Chest:Clone();
                 v1110:SetAttribute("EmoteProperty", true);
                 table.insert(v1107, v1110);
                 v1109.Handle = v1110;
@@ -8051,7 +8051,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1112, _, v1114) --[[ Line: 8597 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1115 = script.Map:Clone();
+                local v1115 = game.ReplicatedStorage.Emotes.Map:Clone();
                 v1115:SetAttribute("EmoteProperty", true);
                 table.insert(v1112, v1115);
                 v1114.Handle = v1115;
@@ -8077,7 +8077,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1117, _, v1119) --[[ Line: 8619 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1120 = script.compass:Clone();
+                local v1120 = game.ReplicatedStorage.Emotes.compass:Clone();
                 v1120:SetAttribute("EmoteProperty", true);
                 table.insert(v1117, v1120);
                 v1119.Handle = v1120;
@@ -8104,7 +8104,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1122, _, v1124) --[[ Line: 8642 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1125 = script.gameboi:Clone();
+                local v1125 = game.ReplicatedStorage.Emotes.gameboi:Clone();
                 v1125:SetAttribute("EmoteProperty", true);
                 table.insert(v1122, v1125);
                 v1124.Handle = v1125;
@@ -8289,7 +8289,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Startup = function(v1142, _, _) --[[ Line: 8847 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v101 (copy)
                 local _ = {};
-                for _, v1147 in pairs(script.Hologram:GetChildren()) do
+                for _, v1147 in pairs(game.ReplicatedStorage.Emotes.Hologram:GetChildren()) do
                     if v1147:IsA("Model") then
                         local v1148 = v1147:Clone();
                         table.insert(v1142, v1148);
@@ -8298,7 +8298,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                             v1150:SetAttribute("EmoteProperty", true);
                             table.insert(v1142, v1150);
                             l_CollectionService_1:AddTag(v1150, "emotestuff" .. v101.Name);
-                            local l_FirstChild_3 = script.Hologram:FindFirstChild(v1150.Name);
+                            local l_FirstChild_3 = game.ReplicatedStorage.Emotes.Hologram:FindFirstChild(v1150.Name);
                             v1150.Material = Enum.Material.Glass;
                             v1150:SetAttribute("Exempt", true);
                             v1150.Transparency = 0.25;
@@ -8480,7 +8480,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1169, _, v1171) --[[ Line: 9030 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1172 = script.Ramen.Handle:Clone();
+                local v1172 = game.ReplicatedStorage.Emotes.Ramen.Handle:Clone();
                 v1172:SetAttribute("EmoteProperty", true);
                 table.insert(v1169, v1172);
                 v1171.Handle = v1172;
@@ -8496,7 +8496,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     "stickLeft", 
                     "stickRight"
                 }) do
-                    local v1176 = script.Ramen[v1175]:Clone();
+                    local v1176 = game.ReplicatedStorage.Emotes.Ramen[v1175]:Clone();
                     v1176:SetAttribute("EmoteProperty", true);
                     table.insert(v1169, v1176);
                     v1176.Parent = v101["Right Arm"];
@@ -8530,7 +8530,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1178, _, v1180) --[[ Line: 9072 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1181 = script.wollet:Clone();
+                local v1181 = game.ReplicatedStorage.Emotes.wollet:Clone();
                 v1181:SetAttribute("EmoteProperty", true);
                 table.insert(v1178, v1181);
                 v1180.Handle = v1181;
@@ -8564,7 +8564,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1184, _, v1186) --[[ Line: 9102 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1187 = script.Clipboard.LeftHandle:Clone();
+                local v1187 = game.ReplicatedStorage.Emotes.Clipboard.LeftHandle:Clone();
                 v1187:SetAttribute("EmoteProperty", true);
                 table.insert(v1184, v1187);
                 v1186.Handle = v1187;
@@ -8585,7 +8585,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     16136325038
                 })[math.random(1, 7)];
                 v1187.Parent = v101;
-                local v1189 = script.Clipboard.RightHandle:Clone();
+                local v1189 = game.ReplicatedStorage.Emotes.Clipboard.RightHandle:Clone();
                 v1189:SetAttribute("EmoteProperty", true);
                 table.insert(v1184, v1189);
                 v1186.Handle = v1189;
@@ -8613,7 +8613,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1191, _, v1193) --[[ Line: 9136 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1194 = script.blower:Clone();
+                local v1194 = game.ReplicatedStorage.Emotes.blower:Clone();
                 v1194:SetAttribute("EmoteProperty", true);
                 table.insert(v1191, v1194);
                 v1193.Handle = v1194;
@@ -8656,7 +8656,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1196, _, v1198) --[[ Line: 9175 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1199 = script.Leye1:Clone();
+                local v1199 = game.ReplicatedStorage.Emotes.Leye1:Clone();
                 v1199:SetAttribute("EmoteProperty", true);
                 table.insert(v1196, v1199);
                 v1198.Handle = v1199;
@@ -8669,7 +8669,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_m6d_18.Name = "Leye1";
                 l_m6d_18.Parent = v101.Head;
                 v1199.Parent = v101;
-                local v1201 = script.Reye1:Clone();
+                local v1201 = game.ReplicatedStorage.Emotes.Reye1:Clone();
                 v1201:SetAttribute("EmoteProperty", true);
                 table.insert(v1196, v1201);
                 v1198.Handle = v1201;
@@ -8698,7 +8698,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1203, _, v1205) --[[ Line: 9208 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1206 = script.Broom:Clone();
+                local v1206 = game.ReplicatedStorage.Emotes.Broom:Clone();
                 v1206:SetAttribute("EmoteProperty", true);
                 table.insert(v1203, v1206);
                 v1205.Handle = v1206;
@@ -8729,7 +8729,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1208, _, v1210) --[[ Line: 9235 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1211 = script.Maxwell:Clone();
+                local v1211 = game.ReplicatedStorage.Emotes.Maxwell:Clone();
                 v1211:SetAttribute("EmoteProperty", true);
                 table.insert(v1208, v1211);
                 v1210.Handle = v1211;
@@ -8775,7 +8775,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1213, _, v1215) --[[ Line: 9273 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1216 = script.Guitar:Clone();
+                local v1216 = game.ReplicatedStorage.Emotes.Guitar:Clone();
                 v1216:SetAttribute("EmoteProperty", true);
                 table.insert(v1213, v1216);
                 v1215.Handle = v1216;
@@ -8809,7 +8809,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1219, _, v1221) --[[ Line: 9304 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1222 = script.Popper:Clone();
+                local v1222 = game.ReplicatedStorage.Emotes.Popper:Clone();
                 v1222:SetAttribute("EmoteProperty", true);
                 table.insert(v1219, v1222);
                 v1221.Handle = v1222;
@@ -8853,7 +8853,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1231, _, v1233) --[[ Line: 9345 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1234 = script.Skull:Clone();
+                local v1234 = game.ReplicatedStorage.Emotes.Skull:Clone();
                 v1234:SetAttribute("EmoteProperty", true);
                 table.insert(v1231, v1234);
                 v1233.Handle = v1234;
@@ -9230,7 +9230,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 v1285.Parent = l_Attachment_6;
                 table.insert(v1281, v1285);
                 v1285:Play();
-                local v1288 = script.ColaFight:Clone();
+                local v1288 = game.ReplicatedStorage.Emotes.ColaFight:Clone();
                 v1288:SetAttribute("EmoteProperty", true);
                 table.insert(v1281, v1288);
                 v1283.Handle = v1288;
@@ -9292,7 +9292,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 });
                 v1293:Play();
                 v1292.ok = v1293;
-                for _, v1295 in pairs(script.Revolvers:GetChildren()) do
+                for _, v1295 in pairs(game.ReplicatedStorage.Emotes.Revolvers:GetChildren()) do
                     if v1295.Name == "Handle" then
                         local v1296 = v1295:Clone();
                         v1296:SetAttribute("EmoteProperty", true);
@@ -9356,7 +9356,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1300, _, v1302) --[[ Line: 9852 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1303 = script.Revolver:Clone();
+                local v1303 = game.ReplicatedStorage.Emotes.Revolver:Clone();
                 v1303:SetAttribute("EmoteProperty", true);
                 table.insert(v1300, v1303);
                 v1302[v1303.Name] = v1303;
@@ -9459,7 +9459,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1317, _, v1319) --[[ Line: 9955 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                for _, v1321 in pairs(script.Revolvers:GetChildren()) do
+                for _, v1321 in pairs(game.ReplicatedStorage.Emotes.Revolvers:GetChildren()) do
                     if v1321.Name == "Handle2" then
                         local v1322 = v1321:Clone();
                         v1322:SetAttribute("EmoteProperty", true);
@@ -9504,7 +9504,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1325, _, v1327) --[[ Line: 9999 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                for _, v1329 in pairs(script.Revolvers:GetChildren()) do
+                for _, v1329 in pairs(game.ReplicatedStorage.Emotes.Revolvers:GetChildren()) do
                     local v1330 = "Left Arm";
                     if v1329.Name == "Handle2" then
                         v1330 = "Right Arm";
@@ -9552,7 +9552,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1340, _, v1342) --[[ Line: 10047 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1343 = script.CHAIR:Clone();
+                local v1343 = game.ReplicatedStorage.Emotes.CHAIR:Clone();
                 v1343:SetAttribute("EmoteProperty", true);
                 table.insert(v1340, v1343);
                 v1342.Handle = v1343;
@@ -9587,7 +9587,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1345, _, v1347) --[[ Line: 10079 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1348 = script.TACO1:Clone();
+                local v1348 = game.ReplicatedStorage.Emotes.TACO1:Clone();
                 v1348:SetAttribute("EmoteProperty", true);
                 table.insert(v1345, v1348);
                 v1347.Handle = v1348;
@@ -9599,7 +9599,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_TACO1_0.Part1 = v1348;
                 l_TACO1_0.Parent = v101["Right Arm"];
                 v1348.Parent = v101;
-                local v1350 = script.TACO2:Clone();
+                local v1350 = game.ReplicatedStorage.Emotes.TACO2:Clone();
                 v1350:SetAttribute("EmoteProperty", true);
                 table.insert(v1345, v1350);
                 v1347.Handle = v1350;
@@ -9621,7 +9621,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1352, _, v1354) --[[ Line: 10106 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1355 = script["Meshes/cARD"]:Clone();
+                local v1355 = game.ReplicatedStorage.Emotes["Meshes/cARD"]:Clone();
                 v1355:SetAttribute("EmoteProperty", true);
                 table.insert(v1352, v1355);
                 v1354.Handle = v1355;
@@ -9647,7 +9647,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1357, _, v1359) --[[ Line: 10131 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1360 = script.Plank:Clone();
+                local v1360 = game.ReplicatedStorage.Emotes.Plank:Clone();
                 v1360:SetAttribute("EmoteProperty", true);
                 table.insert(v1357, v1360);
                 v1359.Handle = v1360;
@@ -9681,7 +9681,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1362, _, v1364) --[[ Line: 10165 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1365 = script.ColaTwo:Clone();
+                local v1365 = game.ReplicatedStorage.Emotes.ColaTwo:Clone();
                 v1365:SetAttribute("EmoteProperty", true);
                 table.insert(v1362, v1365);
                 v1364.Handle = v1365;
@@ -9725,7 +9725,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     Bread4 = CFrame.new(-0.9290413856506348, -0.599616527557373, -0.9804582595825195, -1, 0, 0, 0, 1, 0, 0, 0, -1)
                 };
                 for v1373, v1374 in pairs(v1372) do
-                    local v1375 = script.Bread1:Clone();
+                    local v1375 = game.ReplicatedStorage.Emotes.Bread1:Clone();
                     v1375:SetAttribute("EmoteProperty", true);
                     table.insert(v1369, v1375);
                     v1371.Handle = v1375;
@@ -9771,7 +9771,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(_, _, v1385) --[[ Line: 10249 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy), v75 (ref)
-                local v1386 = script.Flashlight:Clone();
+                local v1386 = game.ReplicatedStorage.Emotes.Flashlight:Clone();
                 l_CollectionService_1:AddTag(v1386, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 local l_Handle_25 = v1386.Handle;
                 l_CollectionService_1:AddTag(l_Handle_25, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -9810,7 +9810,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1390, _, v1392) --[[ Line: 10288 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1393 = script.Cloud:Clone();
+                local v1393 = game.ReplicatedStorage.Emotes.Cloud:Clone();
                 v1393:SetAttribute("EmoteProperty", true);
                 table.insert(v1390, v1393);
                 v1392.Handle = v1393;
@@ -9836,7 +9836,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1395, _, v1397, _, v1399) --[[ Line: 10316 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref), v107 (ref)
-                local v1400 = script.Carboard:Clone();
+                local v1400 = game.ReplicatedStorage.Emotes.Carboard:Clone();
                 v1400:SetAttribute("EmoteProperty", true);
                 table.insert(v1395, v1400);
                 v1397.Handle = v1400;
@@ -9901,7 +9901,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1404, _, v1406) --[[ Line: 10383 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1407 = script.Airhorn:Clone();
+                local v1407 = game.ReplicatedStorage.Emotes.Airhorn:Clone();
                 v1407:SetAttribute("EmoteProperty", true);
                 table.insert(v1404, v1407);
                 v1406.Handle = v1407;
@@ -9935,7 +9935,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1409, _, v1411) --[[ Line: 10417 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1412 = script.MIC:Clone();
+                local v1412 = game.ReplicatedStorage.Emotes.MIC:Clone();
                 v1412:SetAttribute("EmoteProperty", true);
                 table.insert(v1409, v1412);
                 v1411.Handle = v1412;
@@ -9962,7 +9962,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1414, _, v1416) --[[ Line: 10443 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1417 = script.HeartTSB:Clone();
+                local v1417 = game.ReplicatedStorage.Emotes.HeartTSB:Clone();
                 v1417:SetAttribute("EmoteProperty", true);
                 table.insert(v1414, v1417);
                 v1416.Handle = v1417;
@@ -9989,7 +9989,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1419, _, v1421) --[[ Line: 10469 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1422 = script.MangoFork:Clone();
+                local v1422 = game.ReplicatedStorage.Emotes.MangoFork:Clone();
                 v1422:SetAttribute("EmoteProperty", true);
                 table.insert(v1419, v1422);
                 v1421.Handle = v1422;
@@ -10022,7 +10022,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1427, _, v1429) --[[ Line: 10502 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1430 = script.Clapboard:Clone();
+                local v1430 = game.ReplicatedStorage.Emotes.Clapboard:Clone();
                 v1430:SetAttribute("EmoteProperty", true);
                 table.insert(v1427, v1430);
                 v1429.Handle = v1430;
@@ -10055,7 +10055,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1432, _, v1434) --[[ Line: 10532 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1435 = script.Phone2:Clone();
+                local v1435 = game.ReplicatedStorage.Emotes.Phone2:Clone();
                 v1435:SetAttribute("EmoteProperty", true);
                 table.insert(v1432, v1435);
                 v1434.Handle = v1435;
@@ -10101,7 +10101,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1437, _, v1439) --[[ Line: 10573 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1440 = script.Bookk:Clone();
+                local v1440 = game.ReplicatedStorage.Emotes.Bookk:Clone();
                 v1440:SetAttribute("EmoteProperty", true);
                 table.insert(v1437, v1440);
                 v1439.Handle = v1440;
@@ -10153,7 +10153,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1448, _, v1450) --[[ Line: 10625 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1451 = script.UFO:Clone();
+                local v1451 = game.ReplicatedStorage.Emotes.UFO:Clone();
                 v1451:SetAttribute("EmoteProperty", true);
                 table.insert(v1448, v1451);
                 v1450.Handle = v1451;
@@ -10184,7 +10184,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1453, _, v1455) --[[ Line: 10652 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1456 = script.Pizza:Clone();
+                local v1456 = game.ReplicatedStorage.Emotes.Pizza:Clone();
                 v1456:SetAttribute("EmoteProperty", true);
                 table.insert(v1453, v1456);
                 v1455.Handle = v1456;
@@ -10216,7 +10216,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1458, _, v1460) --[[ Line: 10680 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1461 = script.Guitar2:Clone();
+                local v1461 = game.ReplicatedStorage.Emotes.Guitar2:Clone();
                 v1461:SetAttribute("EmoteProperty", true);
                 table.insert(v1458, v1461);
                 v1460.Handle = v1461;
@@ -10247,7 +10247,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1463, _, v1465) --[[ Line: 10707 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1466 = script.flute:Clone();
+                local v1466 = game.ReplicatedStorage.Emotes.flute:Clone();
                 v1466:SetAttribute("EmoteProperty", true);
                 table.insert(v1463, v1466);
                 v1465.Handle = v1466;
@@ -10295,7 +10295,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1468, _, v1470) --[[ Line: 10747 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1471 = script.carpet:Clone();
+                local v1471 = game.ReplicatedStorage.Emotes.carpet:Clone();
                 v1471:SetAttribute("EmoteProperty", true);
                 table.insert(v1468, v1471);
                 v1470.Handle = v1471;
@@ -10319,7 +10319,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1473, _, v1475) --[[ Line: 10769 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1476 = script.basklektball:Clone();
+                local v1476 = game.ReplicatedStorage.Emotes.basklektball:Clone();
                 v1476:SetAttribute("EmoteProperty", true);
                 table.insert(v1473, v1476);
                 v1475.Handle = v1476;
@@ -10362,7 +10362,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     Volume = 1, 
                     Looped = true
                 }):Play();
-                local v1484 = script.watermelon:Clone();
+                local v1484 = game.ReplicatedStorage.Emotes.watermelon:Clone();
                 v1484:SetAttribute("EmoteProperty", true);
                 table.insert(v1481, v1484);
                 v1483.Handle = v1484;
@@ -10396,7 +10396,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1486, _, v1488) --[[ Line: 10843 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1489 = script.tang:Clone();
+                local v1489 = game.ReplicatedStorage.Emotes.tang:Clone();
                 v1489:SetAttribute("EmoteProperty", true);
                 table.insert(v1486, v1489);
                 v1488.Handle = v1489;
@@ -10423,7 +10423,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1491, _, v1493) --[[ Line: 10867 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1494 = script.surrender_Flag:Clone();
+                local v1494 = game.ReplicatedStorage.Emotes.surrender_Flag:Clone();
                 v1494:SetAttribute("EmoteProperty", true);
                 table.insert(v1491, v1494);
                 v1493.Handle = v1494;
@@ -10462,7 +10462,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1496, _, v1498) --[[ Line: 10904 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1499 = script.Watermelon:Clone();
+                local v1499 = game.ReplicatedStorage.Emotes.Watermelon:Clone();
                 v1499:SetAttribute("EmoteProperty", true);
                 table.insert(v1496, v1499);
                 v1498.Handle = v1499;
@@ -10491,7 +10491,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1501, _, v1503) --[[ Line: 10929 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1504 = script.Watermelon2:Clone();
+                local v1504 = game.ReplicatedStorage.Emotes.Watermelon2:Clone();
                 v1504:SetAttribute("EmoteProperty", true);
                 table.insert(v1501, v1504);
                 v1503.Handle = v1504;
@@ -10513,7 +10513,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1506, _, v1508) --[[ Line: 10948 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1509 = script.Log:Clone();
+                local v1509 = game.ReplicatedStorage.Emotes.Log:Clone();
                 v1509:SetAttribute("EmoteProperty", true);
                 table.insert(v1506, v1509);
                 v1508.Handle = v1509;
@@ -10557,7 +10557,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1511, _, v1513) --[[ Line: 10991 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1514 = script.Film:Clone();
+                local v1514 = game.ReplicatedStorage.Emotes.Film:Clone();
                 v1514:SetAttribute("EmoteProperty", true);
                 table.insert(v1511, v1514);
                 v1513.Handle = v1514;
@@ -10597,7 +10597,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1516, _, v1518) --[[ Line: 11029 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1519 = script.Pan:Clone();
+                local v1519 = game.ReplicatedStorage.Emotes.Pan:Clone();
                 v1519:SetAttribute("EmoteProperty", true);
                 table.insert(v1516, v1519);
                 v1518.Handle = v1519;
@@ -10640,7 +10640,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1521, _, v1523) --[[ Line: 11071 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1524 = script.Coffee:Clone();
+                local v1524 = game.ReplicatedStorage.Emotes.Coffee:Clone();
                 v1524:SetAttribute("EmoteProperty", true);
                 table.insert(v1521, v1524);
                 v1523.Handle = v1524;
@@ -10679,7 +10679,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1526, _, v1528) --[[ Line: 11106 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1529 = script.Scooter:Clone();
+                local v1529 = game.ReplicatedStorage.Emotes.Scooter:Clone();
                 v1529:SetAttribute("EmoteProperty", true);
                 table.insert(v1526, v1529);
                 v1528.Handle = v1529;
@@ -10758,7 +10758,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1540, _, v1542) --[[ Line: 11167 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1543 = script.Skateboard:Clone();
+                local v1543 = game.ReplicatedStorage.Emotes.Skateboard:Clone();
                 v1543:SetAttribute("EmoteProperty", true);
                 table.insert(v1540, v1543);
                 v1542.Handle = v1543;
@@ -10832,7 +10832,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v1554, _, v1556) --[[ Line: 11224 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v1557 = script.Sign:Clone();
+                local v1557 = game.ReplicatedStorage.Emotes.Sign:Clone();
                 v1557:SetAttribute("EmoteProperty", true);
                 table.insert(v1554, v1557);
                 v1556.Handle = v1557;
@@ -10942,7 +10942,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1567, _, v1569) --[[ Line: 11337 ]] --[[ Name: Startup ]]
                 -- upvalues: v55 (ref), v101 (copy)
-                for _, v1571 in pairs(script.Juggling:GetChildren()) do
+                for _, v1571 in pairs(game.ReplicatedStorage.Emotes.Juggling:GetChildren()) do
                     v55({
                         cleanup = v1567, 
                         char = v101, 
@@ -10982,9 +10982,9 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 v55({
                     cleanup = v1575, 
                     char = v101, 
-                    object = script.Rock, 
+                    object = game.ReplicatedStorage.Emotes.Rock, 
                     part0 = v101.PrimaryPart, 
-                    part1 = tostring(script.Rock), 
+                    part1 = tostring(game.ReplicatedStorage.Emotes.Rock), 
                     mind = v1577
                 });
             end, 
@@ -11020,7 +11020,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1579, _, v1581) --[[ Line: 11425 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1582 = script.Steak:Clone();
+                local v1582 = game.ReplicatedStorage.Emotes.Steak:Clone();
                 v1582:SetAttribute("EmoteProperty", true);
                 table.insert(v1579, v1582);
                 v1581.Handle = v1582;
@@ -11081,7 +11081,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Attachment_8:SetAttribute("EmoteProperty", true);
                 l_Attachment_8.Parent = v101["Right Arm"];
                 l_Attachment_8.Position = Vector3.new(-0.40700000524520874, -0.8999999761581421, 0, 0);
-                local v1591 = script.Salt:Clone();
+                local v1591 = game.ReplicatedStorage.Emotes.Salt:Clone();
                 v1591.Enabled = false;
                 v1591.Parent = l_Attachment_8;
                 v1589.salt = v1591;
@@ -11127,7 +11127,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     Parent = v101.PrimaryPart, 
                     Volume = 0.75
                 }):Play();
-                local v1597 = script.Camera.Handle:Clone();
+                local v1597 = game.ReplicatedStorage.Emotes.Camera.Handle:Clone();
                 v1597:SetAttribute("EmoteProperty", true);
                 table.insert(v1594, v1597);
                 v1596.camera = v1597;
@@ -11141,7 +11141,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Handle_38.Part1 = v1597;
                 l_Handle_38.Parent = v101["Left Arm"];
                 v1597.Parent = v101;
-                local v1599 = script.Camera.SmallHandle:Clone();
+                local v1599 = game.ReplicatedStorage.Emotes.Camera.SmallHandle:Clone();
                 v1599:SetAttribute("EmoteProperty", true);
                 table.insert(v1594, v1599);
                 v1596.picture = v1599;
@@ -11166,7 +11166,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     l_CollectionService_1:AddTag(l_Attachment_9, "emotestuff" .. v101.Name);
                     l_Attachment_9.Parent = v1603.camera.Camera["Camera Low"].Lends;
                     game:GetService("Debris"):AddItem(l_Attachment_9, 5);
-                    local v1605 = script.ImpactGlow:Clone();
+                    local v1605 = game.ReplicatedStorage.Emotes.ImpactGlow:Clone();
                     v1605.Parent = l_Attachment_9;
                     shared.resizeparticle(v1605, v91(1, 1.2));
                     v1605:Emit(1);
@@ -11259,12 +11259,12 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1626, _, v1628) --[[ Line: 11632 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v101 (copy)
-                local v1629 = script.Notepad.Model:Clone();
+                local v1629 = game.ReplicatedStorage.Emotes.Notepad.Model:Clone();
                 v1629:SetAttribute("EmoteProperty", true);
                 table.insert(v1626, v1629);
                 v1628.Handle = v1629;
                 l_CollectionService_1:AddTag(v1629, "notepad");
-                for _, v1631 in pairs(script.Notepad:GetChildren()) do
+                for _, v1631 in pairs(game.ReplicatedStorage.Emotes.Notepad:GetChildren()) do
                     if v1631:IsA("Motor6D") then
                         local v1632 = v1631:Clone();
                         v1632:SetAttribute("EmoteProperty", true);
@@ -11292,7 +11292,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1633, _, v1635) --[[ Line: 11663 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1636 = script.crowbar:Clone();
+                local v1636 = game.ReplicatedStorage.Emotes.crowbar:Clone();
                 v1636:SetAttribute("EmoteProperty", true);
                 table.insert(v1633, v1636);
                 v1635.Handle = v1636;
@@ -11322,7 +11322,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1638, _, v1640) --[[ Line: 11689 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1641 = script.Popcorn:Clone();
+                local v1641 = game.ReplicatedStorage.Emotes.Popcorn:Clone();
                 v1641:SetAttribute("EmoteProperty", true);
                 table.insert(v1638, v1641);
                 v1640.Handle = v1641;
@@ -11359,11 +11359,11 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1644, _, v1646) --[[ Line: 11720 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1647 = script.Mop.Handle:Clone();
+                local v1647 = game.ReplicatedStorage.Emotes.Mop.Handle:Clone();
                 v1647:SetAttribute("EmoteProperty", true);
                 table.insert(v1644, v1647);
                 v1646.Handle = v1647;
-                local v1648 = script.Mop.M6D:Clone();
+                local v1648 = game.ReplicatedStorage.Emotes.Mop.M6D:Clone();
                 v1648:SetAttribute("EmoteProperty", true);
                 table.insert(v1644, v1648);
                 v1646.md = v1648;
@@ -11388,7 +11388,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1649, _, v1651) --[[ Line: 11745 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1652 = script.Bounce.Sphere:Clone();
+                local v1652 = game.ReplicatedStorage.Emotes.Bounce.Sphere:Clone();
                 v1652:SetAttribute("EmoteProperty", true);
                 table.insert(v1649, v1652);
                 v1651.Handle = v1652;
@@ -11445,7 +11445,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Keyframes = {
                 start = function(v1654, v1655) --[[ Line: 11805 ]]
                     -- upvalues: v101 (copy)
-                    local v1656 = script.Confused:Clone();
+                    local v1656 = game.ReplicatedStorage.Emotes.Confused:Clone();
                     local l_Weld_7 = Instance.new("Weld");
                     v1654.crazy = v1656;
                     v1654.particle = v1656.Attachment.Swirl;
@@ -11544,7 +11544,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v1680, _, v1682) --[[ Line: 11892 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1683 = script.Revolver:Clone();
+                local v1683 = game.ReplicatedStorage.Emotes.Revolver:Clone();
                 v1683:SetAttribute("EmoteProperty", true);
                 table.insert(v1680, v1683);
                 v1682[v1683.Name] = v1683;
@@ -11664,7 +11664,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Keyframes = {
                 show = function(_, v1705) --[[ Line: 12017 ]]
                     -- upvalues: v101 (copy), l_TweenService_0 (ref)
-                    local v1706 = script.RPS:Clone();
+                    local v1706 = game.ReplicatedStorage.Emotes.RPS:Clone();
                     v1706:SetAttribute("EmoteProperty", true);
                     table.insert(v1705, v1706);
                     v1706.ImageLabel.Image = ({
@@ -11905,7 +11905,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         Parent = v101.PrimaryPart, 
                         Volume = 1
                     }):Play();
-                    local v1758 = script.CHAIRBASE:Clone();
+                    local v1758 = game.ReplicatedStorage.Emotes.CHAIRBASE:Clone();
                     v1758:SetAttribute("EmoteProperty", true);
                     table.insert(v1754, v1758);
                     v1756.Handle = v1758;
@@ -11918,7 +11918,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     l_Handle_41.Part1 = v1758;
                     l_Handle_41.Parent = v101.PrimaryPart;
                     v1758.Parent = v101;
-                    local v1760 = script.Clipper:Clone();
+                    local v1760 = game.ReplicatedStorage.Emotes.Clipper:Clone();
                     v1760:SetAttribute("EmoteProperty", true);
                     table.insert(v1754, v1760);
                     v1756.Handle = v1760;
@@ -12066,7 +12066,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["Ping Pong"] = {
             Startup = function(v1793, _, v1795, _) --[[ Line: 12428 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v1797 = script.Racket:Clone();
+                local v1797 = game.ReplicatedStorage.Emotes.Racket:Clone();
                 v1797:SetAttribute("EmoteProperty", true);
                 table.insert(v1793, v1797);
                 v1795.Handle = v1797;
@@ -12095,7 +12095,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         v1804.Parent = v1799;
                         table.insert(v1801, v1804);
                         l_CollectionService_1:AddTag(v1804, "RemoveOnLeave" .. (v104 or l_PlayerFromCharacter_0 or v1799).Name);
-                        local v1805 = script.TablePP:Clone();
+                        local v1805 = game.ReplicatedStorage.Emotes.TablePP:Clone();
                         v1805:SetAttribute("EmoteProperty", true);
                         table.insert(v1801, v1805);
                         v1803.Handle = v1805;
@@ -12115,7 +12115,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                             Parent = v1805, 
                             Volume = 0.5
                         }):Play();
-                        local v1807 = script.Ball:Clone();
+                        local v1807 = game.ReplicatedStorage.Emotes.Ball:Clone();
                         v1807:SetAttribute("EmoteProperty", true);
                         table.insert(v1801, v1807);
                         v1803.Handle = v1807;
@@ -12492,7 +12492,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                                 table.insert(v1881, l_Attachment_11);
                                 l_Attachment_11.Parent = v1880["Right Arm"];
                                 l_Attachment_11.Position = Vector3.new(0.5, -1, -0, 0);
-                                for _, v1897 in pairs(script.FistTouch:GetChildren()) do
+                                for _, v1897 in pairs(game.ReplicatedStorage.Emotes.FistTouch:GetChildren()) do
                                     v1897:Clone().Parent = l_Attachment_11;
                                 end;
                                 for _, v1899 in pairs(l_Attachment_11:GetChildren()) do
@@ -12506,7 +12506,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                             if v1884.interrupted then
                                 return;
                             else
-                                local v1900 = script.Menacing:Clone();
+                                local v1900 = game.ReplicatedStorage.Emotes.Menacing:Clone();
                                 v1900:SetAttribute("EmoteProperty", true);
                                 table.insert(v1881, v1900);
                                 local l_Weld_8 = Instance.new("Weld");
@@ -12936,7 +12936,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 if v104 then
                     return;
                 else
-                    local v1990 = script.cart:Clone();
+                    local v1990 = game.ReplicatedStorage.Emotes.cart:Clone();
                     v1990:SetAttribute("EmoteProperty", true);
                     table.insert(v1986, v1990);
                     v1988.Handle = v1990;
@@ -13130,7 +13130,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     local l_Attachment_13 = Instance.new("Attachment");
                     table.insert(v2023, l_Attachment_13);
                     l_Attachment_13:SetAttribute("EmoteProperty", true);
-                    local v2032 = script.eye:Clone();
+                    local v2032 = game.ReplicatedStorage.Emotes.eye:Clone();
                     v2032.Parent = l_Attachment_13;
                     l_Attachment_13.Parent = v101.Head;
                     v2032.Enabled = true;
@@ -13248,7 +13248,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Startup = function(v2055, _, v2057, _) --[[ Line: 13585 ]] --[[ Name: Startup ]]
                 -- upvalues: v104 (copy), v101 (copy), v75 (ref)
                 if v104 then
-                    local v2059 = script.Sandwich:Clone();
+                    local v2059 = game.ReplicatedStorage.Emotes.Sandwich:Clone();
                     v2059:SetAttribute("EmoteProperty", true);
                     table.insert(v2055, v2059);
                     v2057.Handle = v2059;
@@ -13262,7 +13262,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     v2059.Parent = v101;
                     return;
                 else
-                    local v2061 = script.Blanket:Clone();
+                    local v2061 = game.ReplicatedStorage.Emotes.Blanket:Clone();
                     v2061:SetAttribute("EmoteProperty", true);
                     table.insert(v2055, v2061);
                     v2057.Handle = v2061;
@@ -13286,7 +13286,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         Looped = false, 
                         Volume = 0.75
                     }):Play();
-                    local v2063 = script.Picnick:Clone();
+                    local v2063 = game.ReplicatedStorage.Emotes.Picnick:Clone();
                     v2063:SetAttribute("EmoteProperty", true);
                     table.insert(v2055, v2063);
                     v2057.Handle = v2063;
@@ -13400,7 +13400,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Startup = function(v2082, _, v2084, _) --[[ Line: 13733 ]] --[[ Name: Startup ]]
                 -- upvalues: v104 (copy), v101 (copy), v75 (ref)
                 if v104 then
-                    local v2086 = script.Frame:Clone();
+                    local v2086 = game.ReplicatedStorage.Emotes.Frame:Clone();
                     v2086:SetAttribute("EmoteProperty", true);
                     table.insert(v2082, v2086);
                     v2084.Handle = v2086;
@@ -13421,7 +13421,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         Looped = true, 
                         Volume = 0.4
                     }):Play();
-                    local v2088 = script.brush:Clone();
+                    local v2088 = game.ReplicatedStorage.Emotes.brush:Clone();
                     v2088:SetAttribute("EmoteProperty", true);
                     table.insert(v2082, v2088);
                     v2084.Handle = v2088;
@@ -13438,7 +13438,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         Parent = v2088, 
                         Volume = 1.5
                     }):Play();
-                    local v2090 = script.palette:Clone();
+                    local v2090 = game.ReplicatedStorage.Emotes.palette:Clone();
                     v2090:SetAttribute("EmoteProperty", true);
                     table.insert(v2082, v2090);
                     v2084.Handle = v2090;
@@ -13826,7 +13826,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2177, _, _) --[[ Line: 14183 ]] --[[ Name: Startup ]]
                 -- upvalues: l_CollectionService_1 (ref), v104 (copy), l_PlayerFromCharacter_0 (copy), v101 (copy)
-                local v2180 = script.clonedsword:Clone();
+                local v2180 = game.ReplicatedStorage.Emotes.clonedsword:Clone();
                 v2180:SetAttribute("EmoteProperty", true);
                 table.insert(v2177, v2180);
                 l_CollectionService_1:AddTag(v2180, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -13918,7 +13918,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     Volume = 0.5, 
                     PlaybackSpeed = 1.5
                 }):Play();
-                local v2198 = script.Colaa:Clone();
+                local v2198 = game.ReplicatedStorage.Emotes.Colaa:Clone();
                 v2198:SetAttribute("EmoteProperty", true);
                 table.insert(v2194, v2198);
                 v2196.Handle = v2198;
@@ -14213,7 +14213,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2250, _, v2252) --[[ Line: 14604 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2253 = script["Salt shaker"]:Clone();
+                local v2253 = game.ReplicatedStorage.Emotes["Salt shaker"]:Clone();
                 v2252.bb = v2253;
                 table.insert(v2250, v2253);
                 v2253:SetAttribute("EmoteProperty", true);
@@ -14247,7 +14247,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2256, _, v2258) --[[ Line: 14640 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v2259 = script.basketball:Clone();
+                local v2259 = game.ReplicatedStorage.Emotes.basketball:Clone();
                 v2258.bb = v2259;
                 table.insert(v2256, v2259);
                 v2259:SetAttribute("EmoteProperty", true);
@@ -14284,7 +14284,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2262, _, v2264) --[[ Line: 14680 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2265 = script.sign:Clone();
+                local v2265 = game.ReplicatedStorage.Emotes.sign:Clone();
                 v2265:SetAttribute("EmoteProperty", true);
                 table.insert(v2262, v2265);
                 v2264.Handle = v2265;
@@ -14307,7 +14307,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     game:GetService("Debris"):AddItem(l_Attachment_14, 5);
                     local l_PrimaryPart_0 = v101.PrimaryPart;
                     l_Attachment_14.WorldPosition = (l_PrimaryPart_0.CFrame + l_PrimaryPart_0.CFrame.lookVector * 10).Position + Vector3.new(0, 2, 0, 0);
-                    local v2273 = script.ImpactGlow:Clone();
+                    local v2273 = game.ReplicatedStorage.Emotes.ImpactGlow:Clone();
                     v2273.Parent = l_Attachment_14;
                     shared.resizeparticle(v2273, v91(1, 1.2));
                     v2273:Emit(1);
@@ -14393,7 +14393,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2283, _, v2285) --[[ Line: 14759 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2286 = script.Table:Clone();
+                local v2286 = game.ReplicatedStorage.Emotes.Table:Clone();
                 v2286:SetAttribute("EmoteProperty", true);
                 table.insert(v2283, v2286);
                 v2285.Handle = v2286;
@@ -14411,7 +14411,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 go = function(v2288, _, _, _) --[[ Line: 14770 ]]
                     -- upvalues: l_CollectionService_1 (ref), v101 (copy), l_PlayerFromCharacter_0 (copy), v75 (ref)
                     local v2292 = 0;
-                    local v2293 = script.Table:Clone();
+                    local v2293 = game.ReplicatedStorage.Emotes.Table:Clone();
                     l_CollectionService_1:AddTag(v2293, "emotestuff" .. v101.Name);
                     game:GetService("Debris"):AddItem(v2293, 5);
                     v2293.CanCollide = true;
@@ -14466,7 +14466,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v2298, _, v2300) --[[ Line: 14829 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2301 = script.Letter:Clone();
+                local v2301 = game.ReplicatedStorage.Emotes.Letter:Clone();
                 v2301:SetAttribute("EmoteProperty", true);
                 table.insert(v2298, v2301);
                 v2300.Handle = v2301;
@@ -14495,7 +14495,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 claploop = function(v2304, _, _, _) --[[ Line: 14852 ]]
                     -- upvalues: l_CollectionService_1 (ref), v101 (copy), v75 (ref), v87 (ref), l_PlayerFromCharacter_0 (copy), l_TweenService_0 (ref)
                     local v2308 = tick();
-                    local v2309 = script.Letter.Part:Clone();
+                    local v2309 = game.ReplicatedStorage.Emotes.Letter.Part:Clone();
                     l_CollectionService_1:AddTag(v2309, "emotestuff" .. v101.Name);
                     game:GetService("Debris"):AddItem(v2309, 5);
                     v2309.CanCollide = true;
@@ -14630,7 +14630,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2325, _, v2327) --[[ Line: 14931 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2328 = script.basketball:Clone();
+                local v2328 = game.ReplicatedStorage.Emotes.basketball:Clone();
                 v2327.bb = v2328;
                 table.insert(v2325, v2328);
                 v2328:SetAttribute("EmoteProperty", true);
@@ -14695,7 +14695,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                                     v2343 = 1;
                                 end;
                                 v2335.WorldPosition = l_Position_0 + Vector3.new(v2342, v87:NextNumber(v2340, v2343), 0);
-                                l_Position_0 = script.ImpactGlow:Clone();
+                                l_Position_0 = game.ReplicatedStorage.Emotes.ImpactGlow:Clone();
                                 l_Position_0.Parent = v2335;
                                 shared.resizeparticle(l_Position_0, v91(1, 1.2));
                                 l_Position_0:Emit(1);
@@ -14757,7 +14757,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 throw = function(v2345, _, _, _) --[[ Line: 14992 ]]
                     -- upvalues: l_CollectionService_1 (ref), v101 (copy), l_PlayerFromCharacter_0 (copy), v75 (ref)
                     v2345.bb["B-Ball"].Transparency = 1;
-                    local v2349 = script.basketball["B-Ball"]:Clone();
+                    local v2349 = game.ReplicatedStorage.Emotes.basketball["B-Ball"]:Clone();
                     l_CollectionService_1:AddTag(v2349, "emotestuff" .. v101.Name);
                     game:GetService("Debris"):AddItem(v2349, 5);
                     v2349.CanCollide = true;
@@ -14815,7 +14815,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2357, _, v2359) --[[ Line: 15052 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref), l_TweenService_0 (ref)
-                local v2360 = script.Briefcase:Clone();
+                local v2360 = game.ReplicatedStorage.Emotes.Briefcase:Clone();
                 v2359.bb = v2360;
                 table.insert(v2357, v2360);
                 v2360:SetAttribute("EmoteProperty", true);
@@ -14861,7 +14861,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Keyframes = {
                 slam = function(v2364) --[[ Line: 15100 ]]
                     -- upvalues: l_CollectionService_1 (ref), v101 (copy), l_PlayerFromCharacter_0 (copy), v75 (ref)
-                    local v2365 = script.basketball["B-Ball"]:Clone();
+                    local v2365 = game.ReplicatedStorage.Emotes.basketball["B-Ball"]:Clone();
                     l_CollectionService_1:AddTag(v2365, "emotestuff" .. v101.Name);
                     game:GetService("Debris"):AddItem(v2365, 5);
                     v2365.CanCollide = true;
@@ -14912,11 +14912,11 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2369, _, v2371) --[[ Line: 15151 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2372 = script.basketball:Clone();
+                local v2372 = game.ReplicatedStorage.Emotes.basketball:Clone();
                 v2371.bb = v2372;
                 table.insert(v2369, v2372);
                 v2372:SetAttribute("EmoteProperty", true);
-                local v2373 = script.hoop:Clone();
+                local v2373 = game.ReplicatedStorage.Emotes.hoop:Clone();
                 local l_Weld_9 = Instance.new("Weld");
                 l_Weld_9.Part0 = v101.PrimaryPart;
                 l_Weld_9.Part1 = v2373.Main;
@@ -14956,7 +14956,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2377, _, v2379) --[[ Line: 15197 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2380 = script["metal pipe"]:Clone();
+                local v2380 = game.ReplicatedStorage.Emotes["metal pipe"]:Clone();
                 local l_Part_3 = v2380.Part;
                 l_Part_3.Part0 = v101["Right Arm"];
                 l_Part_3.Part1 = v2380["Metal pipe"].Part;
@@ -14983,7 +14983,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2387, _, v2389) --[[ Line: 15224 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v2390 = script.Weight:Clone();
+                local v2390 = game.ReplicatedStorage.Emotes.Weight:Clone();
                 v2390:SetAttribute("EmoteProperty", true);
                 table.insert(v2387, v2390);
                 v2389.Handle = v2390;
@@ -15019,7 +15019,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2395, _, v2397) --[[ Line: 15256 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2398 = script.TakeMoney["Meshes/Card_model"]:Clone();
+                local v2398 = game.ReplicatedStorage.Emotes.TakeMoney["Meshes/Card_model"]:Clone();
                 v2398:SetAttribute("EmoteProperty", true);
                 table.insert(v2395, v2398);
                 v2397.Handle = v2398;
@@ -15032,7 +15032,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Motor6D_31.Part1 = v2398;
                 l_Motor6D_31.Parent = v101["Left Arm"];
                 v2398.Parent = v101;
-                local v2400 = script.TakeMoney.Counter:Clone();
+                local v2400 = game.ReplicatedStorage.Emotes.TakeMoney.Counter:Clone();
                 v2400:SetAttribute("EmoteProperty", true);
                 table.insert(v2395, v2400);
                 v2400.Name = "asjdaiosdjasjd";
@@ -15068,7 +15068,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2407, _, v2409) --[[ Line: 15300 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v2410 = script.trashbag:Clone();
+                local v2410 = game.ReplicatedStorage.Emotes.trashbag:Clone();
                 v2410:SetAttribute("EmoteProperty", true);
                 table.insert(v2407, v2410);
                 v2409.Handle = v2410;
@@ -15115,7 +15115,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2418, _, v2420) --[[ Line: 15345 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local l_Silence_0 = script.Silence;
+                local l_Silence_0 = game.ReplicatedStorage.Emotes.Silence;
                 local v2422 = l_Silence_0["Earplug Handle"]:Clone();
                 v2422:SetAttribute("EmoteProperty", true);
                 table.insert(v2418, v2422);
@@ -15173,21 +15173,21 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2433, _, v2435) --[[ Line: 15398 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2436 = script.Fries.Fries:Clone();
+                local v2436 = game.ReplicatedStorage.Emotes.Fries.Fries:Clone();
                 v2436:SetAttribute("EmoteProperty", true);
                 table.insert(v2433, v2436);
                 v2435.fries = v2436;
-                local v2437 = script.Fries.primary:Clone();
+                local v2437 = game.ReplicatedStorage.Emotes.Fries.primary:Clone();
                 v2437:SetAttribute("EmoteProperty", true);
                 table.insert(v2433, v2437);
                 v2437.Part0 = v101.PrimaryPart;
                 v2437.Part1 = v2436.primary;
                 v2437.Parent = v101.PrimaryPart;
                 v2436.Parent = v101;
-                local v2438 = script.Fries.Model:Clone();
+                local v2438 = game.ReplicatedStorage.Emotes.Fries.Model:Clone();
                 v2438:SetAttribute("EmoteProperty", true);
                 table.insert(v2433, v2438);
-                local v2439 = script.Fries["primary part"]:Clone();
+                local v2439 = game.ReplicatedStorage.Emotes.Fries["primary part"]:Clone();
                 v2439:SetAttribute("EmoteProperty", true);
                 table.insert(v2433, v2439);
                 v2439.Part0 = v101["Right Arm"];
@@ -15195,7 +15195,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 v2439.Parent = v101["Right Arm"];
                 v2438.Parent = v101;
                 v2435.box = v2438;
-                local v2440 = script.Fries.Chair:Clone();
+                local v2440 = game.ReplicatedStorage.Emotes.Fries.Chair:Clone();
                 v2440:SetAttribute("EmoteProperty", true);
                 table.insert(v2433, v2440);
                 local l_Weld_11 = Instance.new("Weld");
@@ -15204,7 +15204,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Weld_11.C0 = CFrame.new(-0.0262451172, -0.944903374, 0.946708679, 1, 4.04431057E-6, -1.05499259E-6, -4.04430102E-6, 1, 8.92530261E-6, 1.05502875E-6, -8.92529806E-6, 1);
                 l_Weld_11.Parent = v2440;
                 v2440.Parent = v101;
-                local v2442 = script.Fries.Table:Clone();
+                local v2442 = game.ReplicatedStorage.Emotes.Fries.Table:Clone();
                 v2442:SetAttribute("EmoteProperty", true);
                 table.insert(v2433, v2442);
                 local l_Weld_12 = Instance.new("Weld");
@@ -15248,11 +15248,11 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_TweenService_0:Create(v2450, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
                     Volume = 0.75
                 }):Play();
-                local v2451 = script.Money.Handle:Clone();
+                local v2451 = game.ReplicatedStorage.Emotes.Money.Handle:Clone();
                 v2451:SetAttribute("EmoteProperty", true);
                 table.insert(v2447, v2451);
                 v2449.Handle = v2451;
-                local v2452 = script.Money.M6D:Clone();
+                local v2452 = game.ReplicatedStorage.Emotes.Money.M6D:Clone();
                 v2452:SetAttribute("EmoteProperty", true);
                 table.insert(v2447, v2452);
                 v2449.md = v2452;
@@ -15276,10 +15276,10 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2453) --[[ Line: 15496 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2454 = script.Keyboard.Handle:Clone();
+                local v2454 = game.ReplicatedStorage.Emotes.Keyboard.Handle:Clone();
                 v2454:SetAttribute("EmoteProperty", true);
                 table.insert(v2453, v2454);
-                local v2455 = script.Keyboard.M6D:Clone();
+                local v2455 = game.ReplicatedStorage.Emotes.Keyboard.M6D:Clone();
                 v2455:SetAttribute("EmoteProperty", true);
                 table.insert(v2453, v2455);
                 v2455.Name = "Handle";
@@ -15296,11 +15296,11 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Sounds = {}, 
             Startup = function(v2456, _, v2458) --[[ Line: 15516 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v2459 = script.Keyboard.Handle:Clone();
+                local v2459 = game.ReplicatedStorage.Emotes.Keyboard.Handle:Clone();
                 v2459:SetAttribute("EmoteProperty", true);
                 table.insert(v2456, v2459);
                 v2458.kb = v2459.Keyboard;
-                local v2460 = script.Keyboard.M6D:Clone();
+                local v2460 = game.ReplicatedStorage.Emotes.Keyboard.M6D:Clone();
                 v2460:SetAttribute("EmoteProperty", true);
                 table.insert(v2456, v2460);
                 v2460.Name = "Handle";
@@ -15354,10 +15354,10 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2466) --[[ Line: 15571 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2467 = script.Chair.Handle:Clone();
+                local v2467 = game.ReplicatedStorage.Emotes.Chair.Handle:Clone();
                 v2467:SetAttribute("EmoteProperty", true);
                 table.insert(v2466, v2467);
-                local v2468 = script.Chair.M6D:Clone();
+                local v2468 = game.ReplicatedStorage.Emotes.Chair.M6D:Clone();
                 v2468:SetAttribute("EmoteProperty", true);
                 table.insert(v2466, v2468);
                 v2468.Name = "Handle";
@@ -15379,10 +15379,10 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             HideWeapon = true, 
             Startup = function(v2472, _, v2474) --[[ Line: 15594 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v2475 = script.Grave.Grave:Clone();
+                local v2475 = game.ReplicatedStorage.Emotes.Grave.Grave:Clone();
                 v2475:SetAttribute("EmoteProperty", true);
                 table.insert(v2472, v2475);
-                local v2476 = script.Grave.M6D:Clone();
+                local v2476 = game.ReplicatedStorage.Emotes.Grave.M6D:Clone();
                 v2476:SetAttribute("EmoteProperty", true);
                 table.insert(v2472, v2476);
                 v2476.Name = "Handle";
@@ -15429,10 +15429,10 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2481) --[[ Line: 15644 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2482 = script.Coin.Handle:Clone();
+                local v2482 = game.ReplicatedStorage.Emotes.Coin.Handle:Clone();
                 v2482:SetAttribute("EmoteProperty", true);
                 table.insert(v2481, v2482);
-                local v2483 = script.Coin.M6D:Clone();
+                local v2483 = game.ReplicatedStorage.Emotes.Coin.M6D:Clone();
                 v2483:SetAttribute("EmoteProperty", true);
                 table.insert(v2481, v2483);
                 v2483.Name = "Handle";
@@ -15465,7 +15465,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2484, _) --[[ Line: 15678 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2486 = script.Think.Attachment:Clone();
+                local v2486 = game.ReplicatedStorage.Emotes.Think.Attachment:Clone();
                 v2486:SetAttribute("EmoteProperty", true);
                 table.insert(v2484, v2486);
                 v2486.Parent = v101.HumanoidRootPart;
@@ -15602,7 +15602,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 table.insert(v2492, l_Attachment_15);
                 l_Attachment_15.Parent = v101.Head;
                 l_Attachment_15.Position = Vector3.new(-0.1889999955892563, -0.007000000216066837, 0.4569999873638153, 0);
-                local v2496 = script.Sweating:Clone();
+                local v2496 = game.ReplicatedStorage.Emotes.Sweating:Clone();
                 v2494.Crying = v2496;
                 table.insert(v2492, v2496);
                 v2496.Parent = l_Attachment_15;
@@ -15610,7 +15610,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 table.insert(v2492, l_Attachment_16);
                 l_Attachment_16.Parent = v101.Head;
                 l_Attachment_16.Position = Vector3.new(0.1899999976158142, 0.5, -0.46399998664855957, 0);
-                local v2498 = script.Sweated:Clone();
+                local v2498 = game.ReplicatedStorage.Emotes.Sweated:Clone();
                 v2494.Crying2 = v2498;
                 table.insert(v2492, v2498);
                 v2498.Parent = l_Attachment_16;
@@ -15630,7 +15630,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             HideWeapon = true, 
             Startup = function(v2500, _) --[[ Line: 15866 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v2502 = script.Crying:Clone();
+                local v2502 = game.ReplicatedStorage.Emotes.Crying:Clone();
                 table.insert(v2500, v2502);
                 v2502.Parent = v101.Head;
                 local v2503 = v75({
@@ -15658,7 +15658,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2504) --[[ Line: 15896 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref), l_TweenService_0 (ref)
-                local v2505 = script.basketball:Clone();
+                local v2505 = game.ReplicatedStorage.Emotes.basketball:Clone();
                 table.insert(v2504, v2505);
                 v2505:SetAttribute("EmoteProperty", true);
                 local l_Motor6D_33 = v2505:FindFirstChildOfClass("Motor6D");
@@ -15757,7 +15757,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Keyframes = {
                 start = function(v2509, v2510) --[[ Line: 16001 ]]
                     -- upvalues: v101 (copy), v75 (ref)
-                    local v2511 = script.Glasses:Clone();
+                    local v2511 = game.ReplicatedStorage.Emotes.Glasses:Clone();
                     v2511:SetAttribute("EmoteProperty", true);
                     v2511.Parent = v101;
                     table.insert(v2510, v2511);
@@ -15808,7 +15808,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     l_Attachment_17.CFrame = CFrame.new(-0.239279747, 0.309562922, -0.575252533, -0.0331349373, -0.72963804, -0.683030546, -0.989827991, -0.0706492513, 0.123488307, -0.138357326, 0.68017441, -0.719875157);
                     l_Attachment_17.Parent = v101.Head;
                     table.insert(v2515, l_Attachment_17);
-                    for _, v2518 in pairs(script.Shine:GetChildren()) do
+                    for _, v2518 in pairs(game.ReplicatedStorage.Emotes.Shine:GetChildren()) do
                         local v2519 = v2518:Clone();
                         v2519.Parent = l_Attachment_17;
                         shared.resizeparticle(v2519, 1.5);
@@ -16008,7 +16008,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2527, _, _) --[[ Line: 16268 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2530 = script.book:Clone();
+                local v2530 = game.ReplicatedStorage.Emotes.book:Clone();
                 v2530:SetAttribute("EmoteProperty", true);
                 table.insert(v2527, v2530);
                 v2530.Parent = v101;
@@ -16018,7 +16018,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_LeftHandle_2.RootPart.Part0 = l_LeftHandle_2;
                 l_LeftHandle_2.RootPart.Part1 = v2530.RootPart;
                 l_LeftHandle_2.Parent = v101;
-                local v2532 = script.monocle:Clone();
+                local v2532 = game.ReplicatedStorage.Emotes.monocle:Clone();
                 v2532:SetAttribute("EmoteProperty", true);
                 table.insert(v2527, v2532);
                 local l_m6d_27 = v2532.m6d;
@@ -16055,7 +16055,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2535, _, _) --[[ Line: 16311 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v2538 = script.rocket:Clone();
+                local v2538 = game.ReplicatedStorage.Emotes.rocket:Clone();
                 v2538:SetAttribute("EmoteProperty", true);
                 table.insert(v2535, v2538);
                 v2538.Parent = v101;
@@ -16101,8 +16101,8 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 end, 
                 start = function(v2543, v2544) --[[ Line: 16360 ]]
                     -- upvalues: v101 (copy), v75 (ref), v1 (ref)
-                    local v2545 = script.Book.BookRig:Clone();
-                    local v2546 = script.Book.MiddleCover:Clone();
+                    local v2545 = game.ReplicatedStorage.Emotes.Book.BookRig:Clone();
+                    local v2546 = game.ReplicatedStorage.Emotes.Book.MiddleCover:Clone();
                     v2546.Part0 = v101["Left Arm"];
                     v2546.Part1 = v2545.MiddleCover;
                     v2546.Parent = v101["Left Arm"];
@@ -16269,7 +16269,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         Volume = 0.35, 
                         RollOffMaxDistance = v1
                     }):Play();
-                    local v2554 = script.Phone:Clone();
+                    local v2554 = game.ReplicatedStorage.Emotes.Phone:Clone();
                     table.insert(v2552, v2554);
                     v2554.Name = "PhoneEmote";
                     v2554:SetAttribute("EmoteProperty", true);
@@ -16327,7 +16327,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2562, _, v2564) --[[ Line: 16588 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2565 = script.Phone:Clone();
+                local v2565 = game.ReplicatedStorage.Emotes.Phone:Clone();
                 table.insert(v2562, v2565);
                 v2565.Name = "Handle";
                 v2565.Transparency = 1;
@@ -16371,7 +16371,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     table.insert(v2569, v2573);
                     l_CollectionService_1:AddTag(v2573, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 end;
-                local v2575 = script.ArmSlap:Clone();
+                local v2575 = game.ReplicatedStorage.Emotes.ArmSlap:Clone();
                 v2575.Parent = v101;
                 v2575:SetAttribute("EmoteProperty", true);
                 table.insert(v2569, v2575);
@@ -16384,7 +16384,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         end;
                     end;
                 end;
-                for _, v2581 in pairs(script.kjphone:GetChildren()) do
+                for _, v2581 in pairs(game.ReplicatedStorage.Emotes.kjphone:GetChildren()) do
                     local v2582 = v2581:Clone();
                     v2582.Parent = v101.PrimaryPart;
                     v2582.Part0 = v101.PrimaryPart;
@@ -16422,7 +16422,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2587, _, v2589) --[[ Line: 16668 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2590 = script.Phone:Clone();
+                local v2590 = game.ReplicatedStorage.Emotes.Phone:Clone();
                 table.insert(v2587, v2590);
                 v2590.Name = "PhoneEmote";
                 v2590:SetAttribute("EmoteProperty", true);
@@ -16500,7 +16500,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         Volume = 0.7, 
                         RollOffMaxDistance = v1
                     }):Play();
-                    local v2602 = script.Phone:Clone();
+                    local v2602 = game.ReplicatedStorage.Emotes.Phone:Clone();
                     table.insert(v2600, v2602);
                     v2602.Name = "PhoneEmote";
                     v2602:SetAttribute("EmoteProperty", true);
@@ -16559,7 +16559,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         Fork = {
             Startup = function(v2611, _) --[[ Line: 16806 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref)
-                local v2613 = script.Fork.RightGrip:Clone();
+                local v2613 = game.ReplicatedStorage.Emotes.Fork.RightGrip:Clone();
                 table.insert(v2611, v2613);
                 local l_Motor6D_36 = Instance.new("Motor6D");
                 l_Motor6D_36.C0 = CFrame.new(-5.49316406E-4, -1.00001884, 5.7220459E-5, -1.1920929E-7, 1.00000012, 0, 1.00000012, -1.1920929E-7, 0, 0, 0, -1.00000024);
@@ -16567,7 +16567,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Motor6D_36.Part1 = v2613;
                 l_Motor6D_36.Parent = v2613;
                 v2613.Parent = v101;
-                local v2615 = script.Fork.Fork:Clone();
+                local v2615 = game.ReplicatedStorage.Emotes.Fork.Fork:Clone();
                 table.insert(v2611, v2615);
                 v2613.Fork.Part0 = v2613;
                 v2613:SetAttribute("EmoteProperty", true);
@@ -16596,7 +16596,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function() --[[ Line: 16845 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2617 = script.BillboardGui:Clone();
+                local v2617 = game.ReplicatedStorage.Emotes.BillboardGui:Clone();
                 v2617.Enabled = true;
                 v2617.Parent = v101.Head;
                 task.delay(2, function() --[[ Line: 16849 ]]
@@ -16663,7 +16663,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     Parent = v101.PrimaryPart, 
                     Volume = 2.5
                 }):Play();
-                local v2630 = script.Umbrella:Clone();
+                local v2630 = game.ReplicatedStorage.Emotes.Umbrella:Clone();
                 table.insert(v2627, v2630);
                 v2630:SetAttribute("EmoteProperty", true);
                 local l_Motor6D_37 = v2630:FindFirstChildOfClass("Motor6D");
@@ -16921,7 +16921,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2653, _, _) --[[ Line: 17173 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2656 = script.Grocery:Clone();
+                local v2656 = game.ReplicatedStorage.Emotes.Grocery:Clone();
                 v2656:SetAttribute("EmoteProperty", true);
                 table.insert(v2653, v2656);
                 v2656.Name = "Handle";
@@ -16963,7 +16963,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2661, _, _) --[[ Line: 17209 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2664 = script.Stars:Clone();
+                local v2664 = game.ReplicatedStorage.Emotes.Stars:Clone();
                 v2664:SetAttribute("EmoteProperty", true);
                 table.insert(v2661, v2664);
                 v2664.Parent = v101.Torso;
@@ -17001,10 +17001,10 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2668) --[[ Line: 17243 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy), v75 (ref), v1 (ref)
-                local v2669 = script.Cola.Handle:Clone();
+                local v2669 = game.ReplicatedStorage.Emotes.Cola.Handle:Clone();
                 v2669:SetAttribute("EmoteProperty", true);
                 table.insert(v2668, v2669);
-                local v2670 = script.Cola.M6D:Clone();
+                local v2670 = game.ReplicatedStorage.Emotes.Cola.M6D:Clone();
                 v2670:SetAttribute("EmoteProperty", true);
                 table.insert(v2668, v2670);
                 v2670.Name = "Handle";
@@ -17316,7 +17316,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     l_CollectionService_1:AddTag(v2680, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                     v2680.Parent = workspace.Thrown;
                 end;
-                local v2682 = script.GM:Clone();
+                local v2682 = game.ReplicatedStorage.Emotes.GM:Clone();
                 v2682:SetAttribute("EmoteProperty", true);
                 table.insert(v2677, v2682);
                 l_CollectionService_1:AddTag(v2682, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -17331,7 +17331,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Primary1_0.Part1 = v2682.PrimaryPart;
                 l_Primary1_0.Parent = v101.Torso;
                 l_Primary1_0.Name = "Primary";
-                local v2684 = script.AuraBox:Clone();
+                local v2684 = game.ReplicatedStorage.Emotes.AuraBox:Clone();
                 v2684:SetAttribute("EmoteProperty", true);
                 table.insert(v2677, v2684);
                 l_CollectionService_1:AddTag(v2684, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -17344,7 +17344,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                 l_Weld_17.Parent = v2684;
                 for _, v2687 in pairs(v101:GetChildren()) do
                     if v2687:IsA("BasePart") then
-                        for _, v2689 in pairs(script.StartGlitch:GetChildren()) do
+                        for _, v2689 in pairs(game.ReplicatedStorage.Emotes.StartGlitch:GetChildren()) do
                             local v2690 = v2689:Clone();
                             v2690.Parent = v2687;
                             v2690:SetAttribute("EmoteProperty", true);
@@ -17358,7 +17358,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             Keyframes = {
                 burst = function() --[[ Line: 17611 ]]
                     -- upvalues: v101 (copy), v7 (ref)
-                    local v2691 = script.BurstEffect:Clone();
+                    local v2691 = game.ReplicatedStorage.Emotes.BurstEffect:Clone();
                     game.Debris:AddItem(v2691, 3);
                     v2691.Parent = workspace.Thrown;
                     v2691.CFrame = v101.PrimaryPart.CFrame * CFrame.new(-1.33514404E-5, 2.79999971, -0.199993134, 1, 0, 0, 0, 1, 0, 0, 0, 1);
@@ -17399,17 +17399,17 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     l_CollectionService_1:AddTag(v2703, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                     v2703.Parent = workspace.Thrown;
                 end;
-                local v2705 = script.PrisonRealmRig:Clone();
+                local v2705 = game.ReplicatedStorage.Emotes.PrisonRealmRig:Clone();
                 v2705:SetAttribute("EmoteProperty", true);
                 table.insert(v2700, v2705);
                 l_CollectionService_1:AddTag(v2705, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 v2705.Parent = workspace.Thrown;
-                local v2706 = script.RealmPrism:Clone();
+                local v2706 = game.ReplicatedStorage.Emotes.RealmPrism:Clone();
                 v2706:SetAttribute("EmoteProperty", true);
                 table.insert(v2700, v2706);
                 l_CollectionService_1:AddTag(v2706, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
                 v2706.Parent = workspace.Thrown;
-                local v2707 = script.Strings:Clone();
+                local v2707 = game.ReplicatedStorage.Emotes.Strings:Clone();
                 v2707:SetAttribute("EmoteProperty", true);
                 table.insert(v2700, v2707);
                 l_CollectionService_1:AddTag(v2707, "emoteendstuff" .. (v104 or l_PlayerFromCharacter_0 or v101).Name);
@@ -17953,7 +17953,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     Type = "ReplicateEmoteVfx", 
                     Character = v101, 
                     vfxName = v102, 
-                    SpecificModule = script.VFX, 
+                    SpecificModule = game.ReplicatedStorage.Emotes.VFX, 
                     AnimSent = 113876851900426, 
                     RealBind = l_Accessory_0
                 });
@@ -17978,7 +17978,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                             table.insert(v2744, v2747);
                         end;
                         local l_v101_0 = v101;
-                        local v2749 = script.VFX.VfxMods.FS.vfx.Aura:Clone();
+                        local v2749 = game.ReplicatedStorage.Emotes.VFX.VfxMods.FS.vfx.Aura:Clone();
                         for _, v2751 in pairs(v2749:GetChildren()) do
                             local l_l_v101_0_FirstChild_0 = l_v101_0:FindFirstChild(v2751.Name);
                             if l_l_v101_0_FirstChild_0 then
@@ -18076,7 +18076,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                     Type = "ReplicateEmoteVfx", 
                     Character = v101, 
                     vfxName = v102, 
-                    SpecificModule = script.VFX, 
+                    SpecificModule = game.ReplicatedStorage.Emotes.VFX, 
                     AnimSent = 107649573628906, 
                     RealBind = l_Accessory_1
                 });
@@ -18092,7 +18092,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         return;
                     else
                         local l_v101_1 = v101;
-                        local v2769 = script.VFX.VfxMods.Boundless.vfx.AuraChar:Clone();
+                        local v2769 = game.ReplicatedStorage.Emotes.VFX.VfxMods.Boundless.vfx.AuraChar:Clone();
                         game.Debris:AddItem(v2769, 5);
                         local v2770 = shared.sfx({
                             SoundId = "rbxassetid://81055990581650", 
@@ -18170,7 +18170,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2782, _, _) --[[ Line: 18179 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2785 = script.Keys[8]:Clone();
+                local v2785 = game.ReplicatedStorage.Emotes.Keys[8]:Clone();
                 v2785:SetAttribute("EmoteProperty", true);
                 table.insert(v2782, v2785);
                 local l_m6d_29 = v2785.m6d;
@@ -18187,7 +18187,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["Tenth Key"] = {
             Startup = function(v2787, _, _) --[[ Line: 18194 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2790 = script.Keys[10]:Clone();
+                local v2790 = game.ReplicatedStorage.Emotes.Keys[10]:Clone();
                 v2790:SetAttribute("EmoteProperty", true);
                 table.insert(v2787, v2790);
                 local l_m6d_30 = v2790.m6d;
@@ -18209,7 +18209,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["Sixth Key"] = {
             Startup = function(v2792, _, _) --[[ Line: 18215 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2795 = script.Keys[6]:Clone();
+                local v2795 = game.ReplicatedStorage.Emotes.Keys[6]:Clone();
                 v2795:SetAttribute("EmoteProperty", true);
                 table.insert(v2792, v2795);
                 local l_m6d_31 = v2795.m6d;
@@ -18231,7 +18231,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["Ninth Key"] = {
             Startup = function(v2797, _, _) --[[ Line: 18236 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2800 = script.Keys[9]:Clone();
+                local v2800 = game.ReplicatedStorage.Emotes.Keys[9]:Clone();
                 v2800:SetAttribute("EmoteProperty", true);
                 table.insert(v2797, v2800);
                 local l_m6d_32 = v2800.m6d;
@@ -18253,7 +18253,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["First Key"] = {
             Startup = function(v2802, _, _) --[[ Line: 18257 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2805 = script.Keys[1]:Clone();
+                local v2805 = game.ReplicatedStorage.Emotes.Keys[1]:Clone();
                 v2805:SetAttribute("EmoteProperty", true);
                 table.insert(v2802, v2805);
                 local l_m6d_33 = v2805.m6d;
@@ -18276,7 +18276,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["Seventh Key"] = {
             Startup = function(v2807, _, _) --[[ Line: 18279 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2810 = script.Keys[7]:Clone();
+                local v2810 = game.ReplicatedStorage.Emotes.Keys[7]:Clone();
                 v2810:SetAttribute("EmoteProperty", true);
                 table.insert(v2807, v2810);
                 local l_m6d_34 = v2810.m6d;
@@ -18299,7 +18299,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["Third Key"] = {
             Startup = function(v2812, _, _) --[[ Line: 18301 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2815 = script.Keys[3]:Clone();
+                local v2815 = game.ReplicatedStorage.Emotes.Keys[3]:Clone();
                 v2815:SetAttribute("EmoteProperty", true);
                 table.insert(v2812, v2815);
                 local l_m6d_35 = v2815.m6d;
@@ -18321,7 +18321,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["Fourth Key"] = {
             Startup = function(v2817, _, _) --[[ Line: 18322 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2820 = script.Keys[4]:Clone();
+                local v2820 = game.ReplicatedStorage.Emotes.Keys[4]:Clone();
                 v2820:SetAttribute("EmoteProperty", true);
                 table.insert(v2817, v2820);
                 local l_m6d_36 = v2820.m6d;
@@ -18344,7 +18344,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["Fifth Key"] = {
             Startup = function(v2822, _, _) --[[ Line: 18344 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2825 = script.Keys[5]:Clone();
+                local v2825 = game.ReplicatedStorage.Emotes.Keys[5]:Clone();
                 v2825:SetAttribute("EmoteProperty", true);
                 table.insert(v2822, v2825);
                 local l_m6d_37 = v2825.m6d;
@@ -18366,7 +18366,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
         ["Second Key"] = {
             Startup = function(v2827, _, _) --[[ Line: 18365 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2830 = script.Keys[2]:Clone();
+                local v2830 = game.ReplicatedStorage.Emotes.Keys[2]:Clone();
                 v2830:SetAttribute("EmoteProperty", true);
                 table.insert(v2827, v2830);
                 local l_m6d_38 = v2830.m6d;
@@ -18402,7 +18402,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
             }, 
             Startup = function(v2832, _, _) --[[ Line: 18400 ]] --[[ Name: Startup ]]
                 -- upvalues: v101 (copy)
-                local v2835 = script.potion:Clone();
+                local v2835 = game.ReplicatedStorage.Emotes.potion:Clone();
                 v2835.Parent = v101;
                 local l_Weld_19 = Instance.new("Weld");
                 l_Weld_19.Part0 = v101["Right Arm"];
@@ -18614,7 +18614,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                         for v2864, v2865 in pairs(v2863) do
                             v108.Keyframes[v2864] = function(v2866) --[[ Line: 18624 ]]
                                 -- upvalues: v2864 (copy), v2849 (copy), v101 (copy), v2865 (copy)
-                                local v2867 = script.Smear[string.sub(v2864, 1, 6)]:Clone();
+                                local v2867 = game.ReplicatedStorage.Emotes.Smear[string.sub(v2864, 1, 6)]:Clone();
                                 v2867:SetAttribute("EmoteProperty", true);
                                 table.insert(v2849, v2867);
                                 local l_Weld_20 = Instance.new("Weld");
@@ -19914,7 +19914,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                             table.insert(v2849, l_Attachment_18);
                             l_Attachment_18.Parent = v101.PrimaryPart;
                             l_Attachment_18.CFrame = v3038;
-                            local v3040 = script.ImpactGlow2:Clone();
+                            local v3040 = game.ReplicatedStorage.Emotes.ImpactGlow2:Clone();
                             v3040.Parent = l_Attachment_18;
                             v3040:Emit(5);
                             shared.sfx({
@@ -20110,7 +20110,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                                                             if game.PlaceId == 12360882630 or workspace:GetAttribute("RankedOnes") and game.PlaceId ~= 13635175275 then
                                                                 return;
                                                             else
-                                                                local v3087 = script.inv:Clone();
+                                                                local v3087 = game.ReplicatedStorage.Emotes.inv:Clone();
                                                                 v3087:SetAttribute("EmoteProperty", true);
                                                                 table.insert(v2849, v3087);
                                                                 local l_PlayerFromCharacter_5 = game.Players:GetPlayerFromCharacter(v101);
@@ -20359,7 +20359,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
                                             local v3130 = false;
                                             for _, v3132 in pairs(game.Players:GetPlayers()) do
                                                 if v3132.Character then
-                                                    local v3133 = script.Sync:Clone();
+                                                    local v3133 = game.ReplicatedStorage.Emotes.Sync:Clone();
                                                     l_CollectionService_1:AddTag(v3133, (l_PlayerFromCharacter_0 or v101).Name .. "syncui");
                                                     table.insert(v2849, v3133);
                                                     if v102 == "Duel Request" then
@@ -20634,7 +20634,7 @@ v0.Play = function(_, v101, v102, v103, v104, v105) --[[ Line: 466 ]] --[[ Name:
     end;
 end;
 v0.Get = function(_) --[[ Line: 20676 ]] --[[ Name: Get ]]
-    return require(script:FindFirstChild("EmoteData") or script:WaitForChild("EmoteData", 15));
+    return require(game.ReplicatedStorage.Emotes:FindFirstChild("EmoteData") or game.ReplicatedStorage.Emotes:WaitForChild("EmoteData", 15));
 end;
 v0.GetTable = function(_, v3195) --[[ Line: 20680 ]] --[[ Name: GetTable ]]
     -- upvalues: v0 (copy)
